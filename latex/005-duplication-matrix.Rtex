@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\title{Duplication Matrix}
+\author{Ivan Jacob Agaloos Pesigan}
+
+\begin{document}
+
+\maketitle
+
+<<echo=FALSE>>=
+root <- rprojroot::is_rstudio_project
+source(
+  root$find_file(
+    "latex",
+    "R_scripts",
+    "start.R"
+  )
+)
+@
+
+\input{latex/equations/dcap}
+
+<<>>=
+x_i <- matrix(
+  data = c(
+    1.0, 0.5, 0.4,
+    0.5, 1.0, 0.6,
+    0.4, 0.6, 1.0
+  ),
+  ncol = 3
+)
+m_i <- dim(x_i)[1]
+dcap(m_i)
+dcap(m_i) %*% vech(x_i)
+
+all.equal(c(dcap(m_i) %*% vech(x_i)), vec(x_i))
+@
+
+<<echo = FALSE>>=
+rm(
+  x_i,
+  m_i
+)
+@
+
+\end{document}

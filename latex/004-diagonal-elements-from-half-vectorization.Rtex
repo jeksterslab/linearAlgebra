@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\title{Diagonal Elements From Half-Vectorization}
+\author{Ivan Jacob Agaloos Pesigan}
+
+\begin{document}
+
+\maketitle
+
+<<echo=FALSE>>=
+root <- rprojroot::is_rstudio_project
+source(
+  root$find_file(
+    "latex",
+    "R_scripts",
+    "start.R"
+  )
+)
+@
+
+<<>>=
+(x_i <- matrix(c("a", "b", "b", "c"), ncol = 2))
+vech_i <- c("a", "b", "c")
+vechs_i <- "b"
+diags_i <- c("a", "c")
+@
+
+
+\subsection{Elements}
+
+<<>>=
+diag_of_vech(vech_i)
+@
+
+\subsection{Index}
+
+<<>>=
+diag_of_vech(vech_i, loc = TRUE)
+@
+
+<<echo = FALSE>>=
+rm(
+  x_i,
+  vech_i,
+  vechs_i,
+  diags_i
+)
+@
+
+\end{document}

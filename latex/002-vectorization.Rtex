@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Vectorization}
+\author{Ivan Jacob Agaloos Pesigan}
+
+\begin{document}
+
+\maketitle
+
+<<echo=FALSE>>=
+root <- rprojroot::is_rstudio_project
+source(
+  root$find_file(
+    "latex",
+    "R_scripts",
+    "start.R"
+  )
+)
+@
+
+<<>>=
+x_i <- matrix(c("a", "b", "b", "c"), ncol = 2)
+colnames(x_i) <- rownames(x_i) <- c("v1", "v2")
+@
+
+\section{Vectorize}
+
+<<>>=
+vec(x_i)
+@
+
+\section{Half-Vectorize}
+
+<<>>=
+vech(x_i)
+@
+
+\section{Strict Half-Vectorize}
+
+<<>>=
+vechs(x_i)
+@
+
+\section{Names for Half-Vectorization}
+
+<<>>=
+vechnames(colnames(x_i))
+@
+
+\section{Names for Strict Half-Vectorization}
+
+<<>>=
+vechsnames(colnames(x_i))
+@
+
+<<echo = FALSE>>=
+rm(x_i)
+@
+
+\end{document}

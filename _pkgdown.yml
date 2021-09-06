@@ -1,0 +1,19 @@
+destination: docs
+url: https://github.com/jeksterslab/linearAlgebra/
+
+reference:
+- title: Package
+  contents:
+  - has_keyword("package")
+- title: Functions
+  contents:
+  - has_concept("Linear Algebra")
+- title: Vectorization
+  contents:
+  - has_keyword("vectorization")
+- title: Symmetric
+  contents:
+  - has_keyword("symmetric")
+- title: Test
+  contents:
+  - has_keyword("test")
