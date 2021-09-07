@@ -40,9 +40,24 @@
     <loc>https://github.com/jeksterslab/linearAlgebra//reference/vechsnames.html</loc>
   </url>
   <url>
+    <loc>https://github.com/jeksterslab/linearAlgebra//articles/commutation-matrix.Rtex.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/linearAlgebra//articles/diagonal-elements-from-half-vectorization.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/linearAlgebra//articles/duplication-matrix.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/jeksterslab/linearAlgebra//articles/linearAlgebra.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab/linearAlgebra//articles/session.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/linearAlgebra//articles/symmetric-matrix-from-half-vectorization.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/linearAlgebra//articles/vectorization.html</loc>
   </url>
 </urlset>
