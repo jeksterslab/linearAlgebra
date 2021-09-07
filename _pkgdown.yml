@@ -5,7 +5,7 @@ reference:
 - title: Package
   contents:
   - has_keyword("package")
-- title: Functions
+- title: Linear Algebra Functions
   contents:
   - has_concept("Linear Algebra Functions")
 - title: Vectorization
