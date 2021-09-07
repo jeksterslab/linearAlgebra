@@ -34,7 +34,7 @@
 #'   )
 #' )
 #' @export
-#' @family Linear Algebra
+#' @family Linear Algebra Functions
 #' @keywords linearAlgebra test
 test_positive_definite <- function(x,
                                    tol = 1e-8) {

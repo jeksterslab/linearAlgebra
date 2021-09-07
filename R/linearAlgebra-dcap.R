@@ -28,7 +28,7 @@
 #' @examples
 #' dcap(3)
 #' @export
-#' @family Linear Algebra
+#' @family Linear Algebra Functions
 #' @keywords linearAlgebra symmetric
 dcap <- function(x) {
   stopifnot(

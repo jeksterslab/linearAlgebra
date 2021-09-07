@@ -33,7 +33,7 @@
 #' diag_of_vech(vechA, loc = FALSE)
 #' diag_of_vech(vechA, loc = TRUE)
 #' @export
-#' @family Linear Algebra
+#' @family Linear Algebra Functions
 #' @keywords linearAlgebra symmetric
 diag_of_vech <- function(x,
                          loc = FALSE) {

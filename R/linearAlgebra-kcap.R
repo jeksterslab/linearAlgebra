@@ -28,7 +28,7 @@
 #' @examples
 #' kcap(3)
 #' @export
-#' @family Linear Algebra
+#' @family Linear Algebra Functions
 #' @keywords linearAlgebra symmetric
 kcap <- function(x) {
   dcap <- dcap(x)

@@ -26,7 +26,7 @@
 #'
 #' vec(x)
 #' @export
-#' @family Linear Algebra
+#' @family Linear Algebra Functions
 #' @keywords linearAlgebra vectorization
 vec <- function(x) {
   return(
