@@ -1,0 +1,54 @@
+---
+title: "Vectorization"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vectorization}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(linearAlgebra)
+```
+
+```{r}
+x_i <- matrix(c("a", "b", "b", "c"), ncol = 2)
+colnames(x_i) <- rownames(x_i) <- c("v1", "v2")
+```
+
+# Vectorize
+
+```{r}
+vec(x_i)
+```
+
+# Half-Vectorize
+
+```{r}
+vech(x_i)
+```
+
+# Strict Half-Vectorize
+
+```{r}
+vechs(x_i)
+```
+
+# Names for Half-Vectorization
+
+```{r}
+vechnames(colnames(x_i))
+```
+
+# Names for Strict Half-Vectorization
+
+```{r}
+vechsnames(colnames(x_i))
+```

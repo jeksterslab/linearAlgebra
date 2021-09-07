@@ -1,0 +1,40 @@
+---
+title: "Symmetric Matrix From Half-Vectorization"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Symmetric Matrix From Half-Vectorization}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(linearAlgebra)
+```
+
+```{r}
+(x_i <- matrix(c("a", "b", "b", "c"), ncol = 2))
+vech_i <- c("a", "b", "c")
+vechs_i <- "b"
+diags_i <- c("a", "c")
+```
+
+# Symmetric Matrix From Half-Vectorization
+
+## From Half-Vectorization
+
+```{r}
+sym_of_vech(vech_i)
+```
+
+## Symmetric Matrix From Strict Half-Vectorization
+
+```{r}
+sym_of_vechs(vechs_i, diags = diags_i)
+```
