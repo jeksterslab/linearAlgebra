@@ -44,7 +44,7 @@ test_positive_definite(
 \href{https://en.wikipedia.org/wiki/Definite_matrix}{Wikipedia: Definite matrix}
 }
 \seealso{
-Other Linear Algebra: 
+Other Linear Algebra Functions: 
 \code{\link{dcap}()},
 \code{\link{diag_of_vech}()},
 \code{\link{kcap}()},
@@ -59,6 +59,6 @@ Other Linear Algebra:
 \author{
 Ivan Jacob Agaloos Pesigan
 }
-\concept{Linear Algebra}
+\concept{Linear Algebra Functions}
 \keyword{linearAlgebra}
 \keyword{test}

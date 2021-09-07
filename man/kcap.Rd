@@ -37,7 +37,7 @@ kcap(3)
 \href{https://en.wikipedia.org/wiki/Commutation_matrix}{Wikipedia: Commutation matrix}
 }
 \seealso{
-Other Linear Algebra: 
+Other Linear Algebra Functions: 
 \code{\link{dcap}()},
 \code{\link{diag_of_vech}()},
 \code{\link{sym_of_vechs}()},
@@ -52,6 +52,6 @@ Other Linear Algebra:
 \author{
 Ivan Jacob Agaloos Pesigan
 }
-\concept{Linear Algebra}
+\concept{Linear Algebra Functions}
 \keyword{linearAlgebra}
 \keyword{symmetric}

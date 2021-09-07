@@ -35,7 +35,7 @@ vec(x)
 \href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)}{Wikipedia: Vectorization}
 }
 \seealso{
-Other Linear Algebra: 
+Other Linear Algebra Functions: 
 \code{\link{dcap}()},
 \code{\link{diag_of_vech}()},
 \code{\link{kcap}()},
@@ -50,6 +50,6 @@ Other Linear Algebra:
 \author{
 Ivan Jacob Agaloos Pesigan
 }
-\concept{Linear Algebra}
+\concept{Linear Algebra Functions}
 \keyword{linearAlgebra}
 \keyword{vectorization}
