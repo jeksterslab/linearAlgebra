@@ -28,6 +28,3 @@
 ^.\.R$
 ^.\.sh$
 ^.*\.Rproj$
-^linearAlgebra\.Rcheck$
-^linearAlgebra.*\.tar\.gz$
-^linearAlgebra.*\.tgz$

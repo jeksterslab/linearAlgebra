@@ -19,7 +19,7 @@ library(linearAlgebra)
 ```
 
 ```{r}
-(x_i <- matrix(c("a", "b", "b", "c"), ncol = 2))
+(x <- matrix(c("a", "b", "b", "c"), ncol = 2))
 vech_i <- c("a", "b", "c")
 vechs_i <- "b"
 diags_i <- c("a", "c")

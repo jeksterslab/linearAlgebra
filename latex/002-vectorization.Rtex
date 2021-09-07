@@ -20,42 +20,42 @@ source(
 @
 
 <<>>=
-x_i <- matrix(c("a", "b", "b", "c"), ncol = 2)
-colnames(x_i) <- rownames(x_i) <- c("v1", "v2")
+x <- matrix(c("a", "b", "b", "c"), ncol = 2)
+colnames(x) <- rownames(x) <- c("v1", "v2")
 @
 
 \section{Vectorize}
 
 <<>>=
-vec(x_i)
+vec(x)
 @
 
 \section{Half-Vectorize}
 
 <<>>=
-vech(x_i)
+vech(x)
 @
 
 \section{Strict Half-Vectorize}
 
 <<>>=
-vechs(x_i)
+vechs(x)
 @
 
 \section{Names for Half-Vectorization}
 
 <<>>=
-vechnames(colnames(x_i))
+vechnames(colnames(x))
 @
 
 \section{Names for Strict Half-Vectorization}
 
 <<>>=
-vechsnames(colnames(x_i))
+vechsnames(colnames(x))
 @
 
 <<echo = FALSE>>=
-rm(x_i)
+rm(x)
 @
 
 \end{document}

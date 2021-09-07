@@ -111,7 +111,7 @@
    \mathrm{vec} \left( \mathbf{A} \right) .
 \end{equation}\]</span></p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">x_i</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>
+<code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>
   data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
     <span class="fl">1.0</span>, <span class="fl">0.5</span>, <span class="fl">0.4</span>,
     <span class="fl">0.5</span>, <span class="fl">1.0</span>, <span class="fl">0.6</span>,
@@ -119,8 +119,8 @@
   <span class="op">)</span>,
   ncol <span class="op">=</span> <span class="fl">3</span>
 <span class="op">)</span>
-<span class="va">m_i</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">x_i</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>
-<span class="fu"><a href="../reference/dcap.html">dcap</a></span><span class="op">(</span><span class="va">m_i</span><span class="op">)</span>
+<span class="va">m</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>
+<span class="fu"><a href="../reference/dcap.html">dcap</a></span><span class="op">(</span><span class="va">m</span><span class="op">)</span>
 <span class="co">#&gt;       [,1] [,2] [,3] [,4] [,5] [,6]</span>
 <span class="co">#&gt;  [1,]    1    0    0    0    0    0</span>
 <span class="co">#&gt;  [2,]    0    1    0    0    0    0</span>
@@ -131,7 +131,7 @@
 <span class="co">#&gt;  [7,]    0    0    1    0    0    0</span>
 <span class="co">#&gt;  [8,]    0    0    0    0    1    0</span>
 <span class="co">#&gt;  [9,]    0    0    0    0    0    1</span>
-<span class="fu"><a href="../reference/dcap.html">dcap</a></span><span class="op">(</span><span class="va">m_i</span><span class="op">)</span> <span class="op">%*%</span> <span class="fu"><a href="../reference/vech.html">vech</a></span><span class="op">(</span><span class="va">x_i</span><span class="op">)</span>
+<span class="fu"><a href="../reference/dcap.html">dcap</a></span><span class="op">(</span><span class="va">m</span><span class="op">)</span> <span class="op">%*%</span> <span class="fu"><a href="../reference/vech.html">vech</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 <span class="co">#&gt;       [,1]</span>
 <span class="co">#&gt;  [1,]  1.0</span>
 <span class="co">#&gt;  [2,]  0.5</span>
@@ -143,7 +143,10 @@
 <span class="co">#&gt;  [8,]  0.6</span>
 <span class="co">#&gt;  [9,]  1.0</span>
 
-<span class="fu"><a href="https://rdrr.io/r/base/all.equal.html">all.equal</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="../reference/dcap.html">dcap</a></span><span class="op">(</span><span class="va">m_i</span><span class="op">)</span> <span class="op">%*%</span> <span class="fu"><a href="../reference/vech.html">vech</a></span><span class="op">(</span><span class="va">x_i</span><span class="op">)</span><span class="op">)</span>, <span class="fu"><a href="../reference/vec.html">vec</a></span><span class="op">(</span><span class="va">x_i</span><span class="op">)</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/all.equal.html">all.equal</a></span><span class="op">(</span>
+  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="../reference/dcap.html">dcap</a></span><span class="op">(</span><span class="va">m</span><span class="op">)</span> <span class="op">%*%</span> <span class="fu"><a href="../reference/vech.html">vech</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span>,
+  <span class="fu"><a href="../reference/vec.html">vec</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
+<span class="op">)</span>
 <span class="co">#&gt; [1] TRUE</span></code></pre></div>
   </div>
 

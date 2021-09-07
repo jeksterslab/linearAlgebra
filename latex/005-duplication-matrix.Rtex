@@ -22,7 +22,7 @@ source(
 \input{latex/equations/dcap}
 
 <<>>=
-x_i <- matrix(
+x <- matrix(
   data = c(
     1.0, 0.5, 0.4,
     0.5, 1.0, 0.6,
@@ -30,16 +30,19 @@ x_i <- matrix(
   ),
   ncol = 3
 )
-m_i <- dim(x_i)[1]
+m_i <- dim(x)[1]
 dcap(m_i)
-dcap(m_i) %*% vech(x_i)
+dcap(m_i) %*% vech(x)
 
-all.equal(c(dcap(m_i) %*% vech(x_i)), vec(x_i))
+all.equal(
+  c(dcap(m_i) %*% vech(x)),
+  vec(x)
+)
 @
 
 <<echo = FALSE>>=
 rm(
-  x_i,
+  x,
   m_i
 )
 @

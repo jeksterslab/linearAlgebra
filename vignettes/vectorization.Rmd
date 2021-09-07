@@ -19,36 +19,36 @@ library(linearAlgebra)
 ```
 
 ```{r}
-x_i <- matrix(c("a", "b", "b", "c"), ncol = 2)
-colnames(x_i) <- rownames(x_i) <- c("v1", "v2")
+x <- matrix(c("a", "b", "b", "c"), ncol = 2)
+colnames(x) <- rownames(x) <- c("v1", "v2")
 ```
 
 ## Vectorize
 
 ```{r}
-vec(x_i)
+vec(x)
 ```
 
 ## Half-Vectorize
 
 ```{r}
-vech(x_i)
+vech(x)
 ```
 
 ## Strict Half-Vectorize
 
 ```{r}
-vechs(x_i)
+vechs(x)
 ```
 
 ## Names for Half-Vectorization
 
 ```{r}
-vechnames(colnames(x_i))
+vechnames(colnames(x))
 ```
 
 ## Names for Strict Half-Vectorization
 
 ```{r}
-vechsnames(colnames(x_i))
+vechsnames(colnames(x))
 ```

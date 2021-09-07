@@ -22,7 +22,7 @@ source(
 \input{latex/equations/kcap}
 
 <<>>=
-x_i <- matrix(
+x <- matrix(
   data = c(
     1.0, 0.5, 0.4,
     0.5, 1.0, 0.6,
@@ -30,19 +30,19 @@ x_i <- matrix(
   ),
   ncol = 3
 )
-m_i <- dim(x_i)[1]
+m_i <- dim(x)[1]
 kcap(m_i)
-kcap(m_i) %*% vec(x_i)
+kcap(m_i) %*% vec(x)
 
 all.equal(
-  c(kcap(m_i) %*% vec(x_i)), vech(t(x_i)),
-  check.names = FALSE
+  c(kcap(m_i) %*% vec(x)),
+  vech(t(x))
 )
 @
 
 <<echo = FALSE>>=
 rm(
-  x_i,
+  x,
   m_i
 )
 @

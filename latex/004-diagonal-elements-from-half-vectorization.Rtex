@@ -20,7 +20,7 @@ source(
 @
 
 <<>>=
-(x_i <- matrix(c("a", "b", "b", "c"), ncol = 2))
+(x <- matrix(c("a", "b", "b", "c"), ncol = 2))
 vech_i <- c("a", "b", "c")
 vechs_i <- "b"
 diags_i <- c("a", "c")
@@ -40,7 +40,7 @@ diag_of_vech(vech_i, loc = TRUE)
 
 <<echo = FALSE>>=
 rm(
-  x_i,
+  x,
   vech_i,
   vechs_i,
   diags_i

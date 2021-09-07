@@ -106,41 +106,41 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">linearAlgebra</span><span class="op">)</span></code></pre></div>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">x_i</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"b"</span>, <span class="st">"c"</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">x_i</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">x_i</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"v1"</span>, <span class="st">"v2"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"b"</span>, <span class="st">"c"</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"v1"</span>, <span class="st">"v2"</span><span class="op">)</span></code></pre></div>
 <div id="vectorize" class="section level2">
 <h2 class="hasAnchor">
 <a href="#vectorize" class="anchor"></a>Vectorize</h2>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/vec.html">vec</a></span><span class="op">(</span><span class="va">x_i</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu"><a href="../reference/vec.html">vec</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 <span class="co">#&gt; [1] "a" "b" "b" "c"</span></code></pre></div>
 </div>
 <div id="half-vectorize" class="section level2">
 <h2 class="hasAnchor">
 <a href="#half-vectorize" class="anchor"></a>Half-Vectorize</h2>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/vech.html">vech</a></span><span class="op">(</span><span class="va">x_i</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu"><a href="../reference/vech.html">vech</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 <span class="co">#&gt; [1] "a" "b" "c"</span></code></pre></div>
 </div>
 <div id="strict-half-vectorize" class="section level2">
 <h2 class="hasAnchor">
 <a href="#strict-half-vectorize" class="anchor"></a>Strict Half-Vectorize</h2>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/vechs.html">vechs</a></span><span class="op">(</span><span class="va">x_i</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu"><a href="../reference/vechs.html">vechs</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 <span class="co">#&gt; [1] "b"</span></code></pre></div>
 </div>
 <div id="names-for-half-vectorization" class="section level2">
 <h2 class="hasAnchor">
 <a href="#names-for-half-vectorization" class="anchor"></a>Names for Half-Vectorization</h2>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/vechnames.html">vechnames</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">x_i</span><span class="op">)</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu"><a href="../reference/vechnames.html">vechnames</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; [1] "v1.v1" "v1.v2" "v2.v2"</span></code></pre></div>
 </div>
 <div id="names-for-strict-half-vectorization" class="section level2">
 <h2 class="hasAnchor">
 <a href="#names-for-strict-half-vectorization" class="anchor"></a>Names for Strict Half-Vectorization</h2>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/vechsnames.html">vechsnames</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">x_i</span><span class="op">)</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu"><a href="../reference/vechsnames.html">vechsnames</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; [1] "v1.v2"</span></code></pre></div>
 </div>
   </div>
