@@ -25,13 +25,13 @@ vechs_i <- "b"
 diags_i <- c("a", "c")
 ```
 
-# Elements
+## Elements
 
 ```{r}
 diag_of_vech(vech_i)
 ```
 
-# Index
+## Index
 
 ```{r}
 diag_of_vech(vech_i, loc = TRUE)

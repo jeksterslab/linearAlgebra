@@ -23,31 +23,31 @@ x_i <- matrix(c("a", "b", "b", "c"), ncol = 2)
 colnames(x_i) <- rownames(x_i) <- c("v1", "v2")
 ```
 
-# Vectorize
+## Vectorize
 
 ```{r}
 vec(x_i)
 ```
 
-# Half-Vectorize
+## Half-Vectorize
 
 ```{r}
 vech(x_i)
 ```
 
-# Strict Half-Vectorize
+## Strict Half-Vectorize
 
 ```{r}
 vechs(x_i)
 ```
 
-# Names for Half-Vectorization
+## Names for Half-Vectorization
 
 ```{r}
 vechnames(colnames(x_i))
 ```
 
-# Names for Strict Half-Vectorization
+## Names for Strict Half-Vectorization
 
 ```{r}
 vechsnames(colnames(x_i))

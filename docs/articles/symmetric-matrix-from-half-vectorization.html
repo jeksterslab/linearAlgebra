@@ -57,7 +57,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/commutation-matrix.Rtex.html">Commutation Matrix</a>
+      <a href="../articles/commutation-matrix.html">Commutation Matrix</a>
     </li>
     <li>
       <a href="../articles/diagonal-elements-from-half-vectorization.html">Diagonal Elements From Half-Vectorization</a>
@@ -113,21 +113,21 @@
 <span class="va">vech_i</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span><span class="op">)</span>
 <span class="va">vechs_i</span> <span class="op">&lt;-</span> <span class="st">"b"</span>
 <span class="va">diags_i</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"c"</span><span class="op">)</span></code></pre></div>
-<div id="symmetric-matrix-from-half-vectorization" class="section level1">
-<h1 class="hasAnchor">
-<a href="#symmetric-matrix-from-half-vectorization" class="anchor"></a>Symmetric Matrix From Half-Vectorization</h1>
-<div id="from-half-vectorization" class="section level2">
+<div id="symmetric-matrix-from-half-vectorization" class="section level2">
 <h2 class="hasAnchor">
-<a href="#from-half-vectorization" class="anchor"></a>From Half-Vectorization</h2>
+<a href="#symmetric-matrix-from-half-vectorization" class="anchor"></a>Symmetric Matrix From Half-Vectorization</h2>
+<div id="from-half-vectorization" class="section level3">
+<h3 class="hasAnchor">
+<a href="#from-half-vectorization" class="anchor"></a>From Half-Vectorization</h3>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/sym_of_vech.html">sym_of_vech</a></span><span class="op">(</span><span class="va">vech_i</span><span class="op">)</span>
 <span class="co">#&gt;      [,1] [,2]</span>
 <span class="co">#&gt; [1,] "a"  "b" </span>
 <span class="co">#&gt; [2,] "b"  "c"</span></code></pre></div>
 </div>
-<div id="symmetric-matrix-from-strict-half-vectorization" class="section level2">
-<h2 class="hasAnchor">
-<a href="#symmetric-matrix-from-strict-half-vectorization" class="anchor"></a>Symmetric Matrix From Strict Half-Vectorization</h2>
+<div id="symmetric-matrix-from-strict-half-vectorization" class="section level3">
+<h3 class="hasAnchor">
+<a href="#symmetric-matrix-from-strict-half-vectorization" class="anchor"></a>Symmetric Matrix From Strict Half-Vectorization</h3>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/sym_of_vechs.html">sym_of_vechs</a></span><span class="op">(</span><span class="va">vechs_i</span>, diags <span class="op">=</span> <span class="va">diags_i</span><span class="op">)</span>
 <span class="co">#&gt;      [,1] [,2]</span>

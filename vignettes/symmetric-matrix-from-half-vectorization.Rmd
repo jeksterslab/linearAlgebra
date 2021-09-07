@@ -25,15 +25,15 @@ vechs_i <- "b"
 diags_i <- c("a", "c")
 ```
 
-# Symmetric Matrix From Half-Vectorization
+## Symmetric Matrix From Half-Vectorization
 
-## From Half-Vectorization
+### From Half-Vectorization
 
 ```{r}
 sym_of_vech(vech_i)
 ```
 
-## Symmetric Matrix From Strict Half-Vectorization
+### Symmetric Matrix From Strict Half-Vectorization
 
 ```{r}
 sym_of_vechs(vechs_i, diags = diags_i)
