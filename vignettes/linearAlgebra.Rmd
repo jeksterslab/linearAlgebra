@@ -1,5 +1,6 @@
 ---
 title: "linearAlgebra: Linear Algebra with R"
+author: "Ivan Jacob Agaloos Pesigan"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{linearAlgebra: Linear Algebra with R}

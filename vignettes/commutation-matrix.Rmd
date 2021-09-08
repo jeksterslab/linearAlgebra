@@ -1,5 +1,6 @@
 ---
 title: "Commutation Matrix"
+author: "Ivan Jacob Agaloos Pesigan"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Commutation Matrix}

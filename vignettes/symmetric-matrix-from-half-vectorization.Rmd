@@ -1,5 +1,6 @@
 ---
 title: "Symmetric Matrix From Half-Vectorization"
+author: "Ivan Jacob Agaloos Pesigan"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Symmetric Matrix From Half-Vectorization}

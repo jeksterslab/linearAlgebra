@@ -1,5 +1,6 @@
 ---
 title: "Diagonal Elements From Half-Vectorization"
+author: "Ivan Jacob Agaloos Pesigan"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Diagonal Elements From Half-Vectorization}
