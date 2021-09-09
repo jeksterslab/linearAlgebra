@@ -5,7 +5,7 @@ x_i <- matrix(
 )
 answer_i <- as.vector(x_i)
 result_i <- vec(x_i)
-testthat::test_that("vec works", {
+testthat::test_that("linearAlgebra-vec 5 by 2", {
   testthat::expect_equal(
     result_i,
     answer_i
@@ -17,7 +17,7 @@ x_i <- matrix(
 )
 answer_i <- as.vector(x_i)
 result_i <- vec(x_i)
-testthat::test_that("vec works 2 by 2", {
+testthat::test_that("linearAlgebra-vec 2 by 2", {
   testthat::expect_equal(
     result_i,
     answer_i
@@ -60,7 +60,7 @@ x_i <- matrix(
 x_i <- cov(x_i)
 answer_i <- as.vector(x_i)
 result_i <- vec(x_i)
-testthat::test_that("vec works random cov", {
+testthat::test_that("linearAlgebra-vec random cov", {
   testthat::expect_equal(
     result_i,
     answer_i

@@ -5,7 +5,7 @@ result_i <- diag_of_vech(
   x_i,
   loc = FALSE
 )
-testthat::test_that("diag_of_vech works with loc = FALSE", {
+testthat::test_that("linearAlgebra-diag_of_vech 3 by 3 loc = FALSE", {
   testthat::expect_equal(
     result_i,
     answer_i
@@ -16,7 +16,7 @@ result_i <- diag_of_vech(
   x_i,
   loc = TRUE
 )
-testthat::test_that("diag_of_vech works with loc = TRUE", {
+testthat::test_that("linearAlgebra-diag_of_vech 3 by 3 loc = TRUE", {
   testthat::expect_equal(
     result_i,
     answer_i
@@ -28,7 +28,7 @@ result_i <- diag_of_vech(
   x_i,
   loc = FALSE
 )
-testthat::test_that("diag_of_vech works 2 by 2 with loc = FALSE", {
+testthat::test_that("linearAlgebra-diag_of_vech 2 by 2 with loc = FALSE", {
   testthat::expect_equal(
     result_i,
     answer_i
@@ -40,7 +40,7 @@ result_i <- diag_of_vech(
   x_i,
   loc = FALSE
 )
-testthat::test_that("diag_of_vech works 1 by 1", {
+testthat::test_that("linearAlgebra-diag_of_vech 1 by 1", {
   testthat::expect_equal(
     result_i,
     answer_i
@@ -51,7 +51,7 @@ result_i <- diag_of_vech(
   x_i,
   loc = TRUE
 )
-testthat::test_that("diag_of_vech works 1 by 1", {
+testthat::test_that("linearAlgebra-diag_of_vech 1 by 1", {
   testthat::expect_equal(
     result_i,
     answer_i
@@ -100,14 +100,14 @@ result_i <- diag_of_vech(
     names = FALSE
   )
 )
-testthat::test_that("diag_of_vech works random cov", {
+testthat::test_that("linearAlgebra-diag_of_vech random cov", {
   testthat::expect_equal(
     result_i,
     answer_i
   )
 })
 # expect_error
-testthat::test_that("diag_of_vech error", {
+testthat::test_that("linearAlgebra-diag_of_vech error", {
   testthat::expect_error(
     diag_of_vech(as.matrix(1:5))
   )
