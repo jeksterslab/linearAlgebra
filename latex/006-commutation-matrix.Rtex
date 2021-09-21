@@ -1,5 +1,6 @@
 \documentclass{article}
-\usepackage[utf8]{inputenc}
+
+\input{latex/preamble/preamble}
 
 \title{Commutation Matrix}
 \author{Ivan Jacob Agaloos Pesigan}
@@ -19,7 +20,7 @@ source(
 )
 @
 
-\input{latex/equations/kcap}
+\input{latex/equations/linearAlgebra-kcap}
 
 <<>>=
 x <- matrix(
