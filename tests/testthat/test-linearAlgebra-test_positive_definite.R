@@ -1,10 +1,10 @@
 ## ---- test-linearAlgebra-test_positive_definite
-testthat::test_that("linearAlgebra-test_positive_definite true", {
+testthat::test_that("test-linearAlgebra-test_positive_definite true", {
   testthat::expect_true(
     test_positive_definite(diag(2))
   )
 })
-testthat::test_that("linearAlgebra-test_positive_definite false", {
+testthat::test_that("test-linearAlgebra-test_positive_definite false", {
   testthat::expect_false(
     test_positive_definite(
       matrix(
