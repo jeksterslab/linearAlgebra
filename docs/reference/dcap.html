@@ -98,22 +98,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/commutation-matrix.html">Commutation Matrix</a>
-    </li>
-    <li>
-      <a href="../articles/diagonal-elements-from-half-vectorization.html">Diagonal Elements From Half-Vectorization</a>
-    </li>
-    <li>
-      <a href="../articles/duplication-matrix.html">Duplication Matrix</a>
-    </li>
-    <li>
       <a href="../articles/session.html">linearAlgebra: Session</a>
-    </li>
-    <li>
-      <a href="../articles/symmetric-matrix-from-half-vectorization.html">Symmetric Matrix From Half-Vectorization</a>
-    </li>
-    <li>
-      <a href="../articles/vectorization.html">Vectorization</a>
     </li>
   </ul>
 </li>
@@ -162,26 +147,58 @@ Dimension of the symmetric matrix.</p></td>
     <p>A matrix.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>The duplication matrix \(D_{m}\) is the
+    <p>The duplication matrix
 \(
-  m^2 \times \frac{m \left( m + 1 \right)}{2}
+\mathbf{D}_{k}
+\)
+is the
+\(
+k^2 \times \frac{k \left( k + 1 \right)}{2}
 \)
 matrix
-for a given \(m \times m\) symmetric matrix \(A\)
-where
+for a given
 \(
-  D_{m} \mathrm{vech} \left( A \right)
-  =
-  \mathrm{vec} \left( A \right)
-\).</p>
+k \times k
+\)
+symmetric matrix
+\(
+\mathbf{A}
+\)
+where</p>
+<p>$$
+   \mathbf{D}_{k} \mathrm{vech} \left( \mathbf{A} \right)
+   =
+   \mathrm{vec} \left( \mathbf{A} \right)
+$$</p>
+<p>\(
+\mathrm{vec} \left( \cdot \right)
+\)
+is the vectorization of a matrix,
+and
+\(
+\mathrm{vech} \left( \cdot \right)
+\)
+is the half-vectorization of a matrix.</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p><a href='https://en.wikipedia.org/wiki/Duplication_and_elimination_matrices#Duplication_matrix'>Wikipedia: Duplication matrix</a></p>
+<p>Magnus, J. R., &amp; Neudecker, H. (1980).
+The elimination matrix: Some lemmas and applications.
+SIAM  Journal  on  Algebraic  Discrete  Methods,
+1(4),
+422--449.
+<a href='https://doi.org/10.1137/0601049'>https://doi.org/10.1137/0601049</a></p>
+<p>Magnus, J. R., &amp; Neudecker, H. (2019).
+Matrix  differential  calculus with  applications  in  statistics  and  econometrics.
+Wiley.
+<a href='https://doi.org/10.1002/9781119541219'>https://doi.org/10.1002/9781119541219</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other Linear Algebra Functions: 
 <code><a href='diag_of_vech.html'>diag_of_vech</a>()</code>,
-<code><a href='kcap.html'>kcap</a>()</code>,
+<code><a href='mcap_cor.html'>mcap_cor</a>()</code>,
+<code><a href='mcap_diag.html'>mcap_diag</a>()</code>,
+<code><a href='mcap_sym.html'>mcap_sym</a>()</code>,
 <code><a href='sym_of_vechs.html'>sym_of_vechs</a>()</code>,
 <code><a href='sym_of_vech.html'>sym_of_vech</a>()</code>,
 <code><a href='test_positive_definite.html'>test_positive_definite</a>()</code>,

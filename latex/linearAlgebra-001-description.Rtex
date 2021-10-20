@@ -1,0 +1,28 @@
+\documentclass{article}
+
+\input{latex/preamble/preamble}
+
+\title{linearAlgebra: Linear Algebra}
+\author{Ivan Jacob Agaloos Pesigan}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+<<echo=FALSE>>=
+root <- rprojroot::is_rstudio_project
+source(
+  root$find_file(
+    "latex",
+    "R_scripts",
+    "start.R"
+  )
+)
+@
+
+\section*{Description}
+
+A collection of functions related to linear algebra.
+
+\end{document}

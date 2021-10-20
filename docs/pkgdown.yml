@@ -2,14 +2,9 @@ pandoc: 2.11.4
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
-  commutation-matrix: commutation-matrix.html
-  diagonal-elements-from-half-vectorization: diagonal-elements-from-half-vectorization.html
-  duplication-matrix: duplication-matrix.html
   linearAlgebra: linearAlgebra.html
   session: session.html
-  symmetric-matrix-from-half-vectorization: symmetric-matrix-from-half-vectorization.html
-  vectorization: vectorization.html
-last_built: 2021-10-18T12:28Z
+last_built: 2021-10-20T16:04Z
 urls:
   reference: https://github.com/jeksterslab/linearAlgebra//reference
   article: https://github.com/jeksterslab/linearAlgebra//articles

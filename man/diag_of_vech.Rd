@@ -45,7 +45,9 @@ diag_of_vech(vechA, loc = TRUE)
 \seealso{
 Other Linear Algebra Functions: 
 \code{\link{dcap}()},
-\code{\link{kcap}()},
+\code{\link{mcap_cor}()},
+\code{\link{mcap_diag}()},
+\code{\link{mcap_sym}()},
 \code{\link{sym_of_vechs}()},
 \code{\link{sym_of_vech}()},
 \code{\link{test_positive_definite}()},

@@ -17,29 +17,65 @@ A matrix.
 Create a duplication matrix.
 }
 \details{
-The duplication matrix \eqn{D_{m}} is the
+The duplication matrix
 \eqn{
-  m^2 \times \frac{m \left( m + 1 \right)}{2}
+\mathbf{D}_{k}
+}
+is the
+\eqn{
+k^2 \times \frac{k \left( k + 1 \right)}{2}
 }
 matrix
-for a given \eqn{m \times m} symmetric matrix \eqn{A}
-where
+for a given
 \eqn{
-  D_{m} \mathrm{vech} \left( A \right)
-  =
-  \mathrm{vec} \left( A \right)
-}.
+k \times k
+}
+symmetric matrix
+\eqn{
+\mathbf{A}
+}
+where
+
+\deqn{
+   \mathbf{D}_{k} \mathrm{vech} \left( \mathbf{A} \right)
+   =
+   \mathrm{vec} \left( \mathbf{A} \right)
+}
+
+\eqn{
+\mathrm{vec} \left( \cdot \right)
+}
+is the vectorization of a matrix,
+and
+\eqn{
+\mathrm{vech} \left( \cdot \right)
+}
+is the half-vectorization of a matrix.
 }
 \examples{
 dcap(3)
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Duplication_and_elimination_matrices#Duplication_matrix}{Wikipedia: Duplication matrix}
+
+Magnus, J. R., & Neudecker, H. (1980).
+The elimination matrix: Some lemmas and applications.
+SIAM  Journal  on  Algebraic  Discrete  Methods,
+1(4),
+422--449.
+\url{https://doi.org/10.1137/0601049}
+
+Magnus, J. R., & Neudecker, H. (2019).
+Matrix  differential  calculus with  applications  in  statistics  and  econometrics.
+Wiley.
+\url{https://doi.org/10.1002/9781119541219}
 }
 \seealso{
 Other Linear Algebra Functions: 
 \code{\link{diag_of_vech}()},
-\code{\link{kcap}()},
+\code{\link{mcap_cor}()},
+\code{\link{mcap_diag}()},
+\code{\link{mcap_sym}()},
 \code{\link{sym_of_vechs}()},
 \code{\link{sym_of_vech}()},
 \code{\link{test_positive_definite}()},

@@ -52,7 +52,9 @@ vech(x)
 Other Linear Algebra Functions: 
 \code{\link{dcap}()},
 \code{\link{diag_of_vech}()},
-\code{\link{kcap}()},
+\code{\link{mcap_cor}()},
+\code{\link{mcap_diag}()},
+\code{\link{mcap_sym}()},
 \code{\link{sym_of_vechs}()},
 \code{\link{sym_of_vech}()},
 \code{\link{test_positive_definite}()},

@@ -1,0 +1,65 @@
+\documentclass{article}
+
+\input{latex/preamble/preamble}
+
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
+\addbibresource{bib/Lib-Correlations-Asymptotic-Covariance-Matrix.bib}
+
+\title{Pattern Matrix}
+\author{Ivan Jacob Agaloos Pesigan}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+<<echo=FALSE>>=
+root <- rprojroot::is_rstudio_project
+source(
+  root$find_file(
+    "latex",
+    "R_scripts",
+    "start.R"
+  )
+)
+@
+
+\input{latex/equations/linearAlgebra-mcap-diag-let}
+
+\input{latex/equations/linearAlgebra-mcap-diag}
+
+\input{latex/equations/linearAlgebra-mcap-sym-let}
+
+\input{latex/equations/linearAlgebra-mcap-sym}
+
+\input{latex/equations/linearAlgebra-mcap-cor-let}
+
+\input{latex/equations/linearAlgebra-mcap-cor}
+
+\newpage
+
+\section*{Examples}
+
+<<eval = FALSE>>=
+library(linearAlgebra)
+@
+
+<<>>=
+matrix(
+  c("rho_11", "rho_12", "rho_21", "rho_22"),
+  nrow = 2
+)
+mcap_diag(2)
+mcap_sym(2)
+mcap_cor(2)
+@
+
+\newpage
+
+\section*{Readings}
+
+See \Textcite{Nel-1985} p. 141--142.
+
+\printbibliography
+
+\end{document}

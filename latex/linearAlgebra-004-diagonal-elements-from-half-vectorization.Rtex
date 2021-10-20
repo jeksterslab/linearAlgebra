@@ -1,0 +1,57 @@
+\documentclass{article}
+
+\input{latex/preamble/preamble}
+
+\title{Diagonal Elements From Half-Vectorization}
+\author{Ivan Jacob Agaloos Pesigan}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+<<echo=FALSE>>=
+root <- rprojroot::is_rstudio_project
+source(
+  root$find_file(
+    "latex",
+    "R_scripts",
+    "start.R"
+  )
+)
+@
+
+<<eval = FALSE>>=
+library(linearAlgebra)
+@
+
+<<>>=
+A <- matrix(c("a", "b", "b", "c"), ncol = 2)
+A
+vech_i <- c("a", "b", "c")
+vechs_i <- "b"
+diags_i <- c("a", "c")
+@
+
+\section*{Elements}
+
+<<>>=
+diag_of_vech(vech_i)
+@
+
+\section*{Index}
+
+<<>>=
+diag_of_vech(vech_i, loc = TRUE)
+@
+
+<<echo = FALSE>>=
+rm(
+  A,
+  vech_i,
+  vechs_i,
+  diags_i
+)
+@
+
+\end{document}

@@ -1,0 +1,68 @@
+\documentclass{article}
+
+\input{latex/preamble/preamble}
+
+\title{Vectorization}
+\author{Ivan Jacob Agaloos Pesigan}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+<<echo=FALSE>>=
+root <- rprojroot::is_rstudio_project
+source(
+  root$find_file(
+    "latex",
+    "R_scripts",
+    "start.R"
+  )
+)
+@
+
+<<eval = FALSE>>=
+library(linearAlgebra)
+@
+
+<<>>=
+A <- matrix(c("a", "b", "b", "c"), ncol = 2)
+colnames(A) <- rownames(A) <- c("v1", "v2")
+A
+@
+
+\section*{Vectorize}
+
+<<>>=
+vec(A)
+@
+
+\section*{Half-Vectorize}
+
+<<>>=
+vech(A)
+@
+
+\section*{Strict Half-Vectorize}
+
+<<>>=
+vechs(A)
+@
+
+\section*{Names for Half-Vectorization}
+
+<<>>=
+vechnames(colnames(A))
+@
+
+\section*{Names for Strict Half-Vectorization}
+
+<<>>=
+vechsnames(colnames(A))
+@
+
+<<echo = FALSE>>=
+rm(A)
+@
+
+\end{document}

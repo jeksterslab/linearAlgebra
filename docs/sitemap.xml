@@ -10,10 +10,16 @@
     <loc>https://github.com/jeksterslab/linearAlgebra//reference/diag_of_vech.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/linearAlgebra//reference/kcap.html</loc>
+    <loc>https://github.com/jeksterslab/linearAlgebra//reference/linearAlgebra.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/linearAlgebra//reference/linearAlgebra.html</loc>
+    <loc>https://github.com/jeksterslab/linearAlgebra//reference/mcap_cor.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/linearAlgebra//reference/mcap_diag.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/linearAlgebra//reference/mcap_sym.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab/linearAlgebra//reference/sym_of_vech.html</loc>
@@ -40,24 +46,9 @@
     <loc>https://github.com/jeksterslab/linearAlgebra//reference/vechsnames.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/linearAlgebra//articles/commutation-matrix.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/linearAlgebra//articles/diagonal-elements-from-half-vectorization.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/linearAlgebra//articles/duplication-matrix.html</loc>
-  </url>
-  <url>
     <loc>https://github.com/jeksterslab/linearAlgebra//articles/linearAlgebra.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab/linearAlgebra//articles/session.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/linearAlgebra//articles/symmetric-matrix-from-half-vectorization.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/linearAlgebra//articles/vectorization.html</loc>
   </url>
 </urlset>
