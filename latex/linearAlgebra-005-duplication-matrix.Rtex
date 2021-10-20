@@ -33,7 +33,7 @@ source(
 
 \newpage
 
-\section**{Examples}
+\section*{Examples}
 
 <<eval = FALSE>>=
 library(linearAlgebra)
