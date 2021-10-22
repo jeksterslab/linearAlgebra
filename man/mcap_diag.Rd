@@ -2,7 +2,7 @@
 % Please edit documentation in R/linearAlgebra-mcap_diag.R
 \name{mcap_diag}
 \alias{mcap_diag}
-\title{Diagonal Pattern Matrix}
+\title{The Diagonal Pattern Matrix}
 \usage{
 mcap_diag(x)
 }
@@ -14,42 +14,42 @@ Dimension of the symmetric matrix.}
 A matrix.
 }
 \description{
-Create a diagonal pattern matrix.
+Creates a diagonal pattern matrix.
 }
 \details{
 \eqn{
-\mathbf{M}_{k}
-\left(
-d
-\right)
+    \mathbf{M}_{k}
+    \left(
+    d
+    \right)
 }
 is the
 \eqn{
-k \times k
+    k \times k
 }
 diagonal pattern matrix with
 
 \deqn{
-	\left(
-	\mathbf{M}_{k}
-	\left(
-	d
-	\right)
-	\right)_{ij, gh}
-	=
-	\begin{cases}
-		1
-		  &
-		\text{if}
-		\quad
-		i = j = g = h
-		,
-		\\
-		0
-		  &
-		\text{otherwise}
-		.
-	\end{cases}
+    \left(
+	   \mathbf{M}_{k}
+	   \left(
+    d
+	   \right)
+	   \right)_{ij, gh}
+	   =
+	   \begin{cases}
+	       1
+		   &
+		   \text{if}
+		   \quad
+		   i = j = g = h
+		   ,
+		   \\
+	       0
+		   &
+		   \text{otherwise}
+		   .
+    \end{cases}
 }
 }
 \examples{
@@ -63,23 +63,17 @@ Linear Algebra and its Applications,
 https://doi.org/10.1016/0024-3795(85)90191-0
 }
 \seealso{
-Other Linear Algebra Functions: 
+Other Symmetric Functions: 
 \code{\link{dcap}()},
-\code{\link{diag_of_vech}()},
 \code{\link{mcap_cor}()},
 \code{\link{mcap_sym}()},
+\code{\link{pinv_of_dcap}()},
 \code{\link{sym_of_vechs}()},
-\code{\link{sym_of_vech}()},
-\code{\link{test_positive_definite}()},
-\code{\link{vechnames}()},
-\code{\link{vechsnames}()},
-\code{\link{vechs}()},
-\code{\link{vech}()},
-\code{\link{vec}()}
+\code{\link{sym_of_vech}()}
 }
 \author{
 Ivan Jacob Agaloos Pesigan
 }
-\concept{Linear Algebra Functions}
+\concept{Symmetric Functions}
 \keyword{linearAlgebra}
 \keyword{symmetric}

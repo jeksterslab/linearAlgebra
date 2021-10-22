@@ -19,22 +19,40 @@ Separator for variable names.}
 A vector.
 }
 \description{
-Half-vectorize a symmetric matrix.
+Half-vectorize a matrix.
 }
 \details{
-Generates an \eqn{m(m + 1) / 2} vector
-from the unique elements
-of an \eqn{m \times m} symmetric matrix
-by stacking the columns (column-major).
+The half-vectorization of an
+\eqn{k \times k}
+matrix
+\eqn{\mathbf{A}},
+given by
+\eqn{
+    \mathrm{vech} \left( \mathbf{A} \right)
+},
+is the
+\eqn{
+    \frac{1}{2}
+    k
+    \left(
+    k + 1
+    \right)
+    \times
+    1
 }
-\section{Dependencies}{
-\itemize{
-\item \code{\link[=vechnames]{vechnames()}}
+vector obtained from
+the vectorization of
+\eqn{\mathbf{A}},
+given by
+\eqn{
+    \mathrm{vec} \left( \mathbf{A} \right)
+},
+where that all upper diagonal elements of
+\eqn{\mathbf{A}}
+are eliminated.
 }
-}
-
 \examples{
-x <- matrix(
+A <- matrix(
   data = c(
     1.0, 0.5, 0.4,
     0.5, 1.0, 0.6,
@@ -43,21 +61,19 @@ x <- matrix(
   ncol = 3
 )
 
-vech(x)
+vech(A)
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Half-vectorization}{Wikipedia: Half-vectorization}
+
+Magnus, J. R., & Neudecker, H. (2019).
+Matrix  differential  calculus with  applications  in  statistics  and  econometrics.
+Wiley.
+\url{https://doi.org/10.1002/9781119541219}
 }
 \seealso{
-Other Linear Algebra Functions: 
-\code{\link{dcap}()},
+Other Vectorization Functions: 
 \code{\link{diag_of_vech}()},
-\code{\link{mcap_cor}()},
-\code{\link{mcap_diag}()},
-\code{\link{mcap_sym}()},
-\code{\link{sym_of_vechs}()},
-\code{\link{sym_of_vech}()},
-\code{\link{test_positive_definite}()},
 \code{\link{vechnames}()},
 \code{\link{vechsnames}()},
 \code{\link{vechs}()},
@@ -66,7 +82,6 @@ Other Linear Algebra Functions:
 \author{
 Ivan Jacob Agaloos Pesigan
 }
-\concept{Linear Algebra Functions}
+\concept{Vectorization Functions}
 \keyword{linearAlgebra}
-\keyword{symmetric}
 \keyword{vectorization}

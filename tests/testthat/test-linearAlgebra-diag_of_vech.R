@@ -109,7 +109,7 @@ testthat::test_that("test-linearAlgebra-diag_of_vech random cov", {
 # expect_error
 testthat::test_that("test-linearAlgebra-diag_of_vech error", {
   testthat::expect_error(
-    diag_of_vech(as.matrix(1:5))
+    diag_of_vech(1:4)
   )
 })
 # clean environment

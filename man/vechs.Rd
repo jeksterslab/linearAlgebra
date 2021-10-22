@@ -20,24 +20,45 @@ A vector.
 }
 \description{
 Apply a strict half-vectorization,
-that is, half-vectorize an \eqn{m \times m}
-symmetric matrix without the diagonal elements.
+that is, half-vectorize an
+\eqn{k \times k}
+matrix
+without the diagonal elements.
 }
 \details{
-Generates an \eqn{(m(m + 1) / 2) - m} vector
-from the unique elements
-of an \eqn{m \times m} symmetric matrix,
-excluding the diagonals,
-by stacking the columns (column-major).
+The strict half-vectorization of a
+\eqn{k \times k}
+matrix
+\eqn{\mathbf{A}},
+given by
+\eqn{
+    \mathrm{vechs} \left( \mathbf{A} \right)
+},
+is the
+\eqn{
+    \frac{1}{2}
+    k
+    \left(
+    k + 1
+    \right)
+    -
+    k
+    \times
+    1
 }
-\section{Dependencies}{
-\itemize{
-\item \code{\link[=vechsnames]{vechsnames()}}
+vector obtained from
+the vectorization of
+\eqn{\mathbf{A}},
+given by
+\eqn{
+    \mathrm{vec} \left( \mathbf{A} \right)
+},
+where that all diagonal and upper diagonal elements of
+\eqn{\mathbf{A}}
+are eliminated.
 }
-}
-
 \examples{
-x <- matrix(
+A <- matrix(
   data = c(
     1.0, 0.5, 0.4,
     0.5, 1.0, 0.6,
@@ -46,21 +67,14 @@ x <- matrix(
   ncol = 3
 )
 
-vechs(x)
+vechs(A)
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Half-vectorization}{Wikipedia: Half-vectorization}
 }
 \seealso{
-Other Linear Algebra Functions: 
-\code{\link{dcap}()},
+Other Vectorization Functions: 
 \code{\link{diag_of_vech}()},
-\code{\link{mcap_cor}()},
-\code{\link{mcap_diag}()},
-\code{\link{mcap_sym}()},
-\code{\link{sym_of_vechs}()},
-\code{\link{sym_of_vech}()},
-\code{\link{test_positive_definite}()},
 \code{\link{vechnames}()},
 \code{\link{vechsnames}()},
 \code{\link{vech}()},
@@ -69,7 +83,6 @@ Other Linear Algebra Functions:
 \author{
 Ivan Jacob Agaloos Pesigan
 }
-\concept{Linear Algebra Functions}
+\concept{Vectorization Functions}
 \keyword{linearAlgebra}
-\keyword{symmetric}
 \keyword{vectorization}

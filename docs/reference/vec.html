@@ -146,22 +146,30 @@
     <p>A vector.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Generates a vector of length \(mn\)
-from the elements of an \(m \times n\) matrix.</p>
+    <p>The vectorization of an
+\(m \times n\)
+matrix
+\(\mathbf{A}\),
+given by
+\(
+    \mathrm{vec} \left( \mathbf{A} \right)
+\),
+is the
+\(mn \times 1\)
+vector obtained by stacking the elements of
+\(\mathbf{A}\)
+column-wise.</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p><a href='https://en.wikipedia.org/wiki/Vectorization_(mathematics)'>Wikipedia: Vectorization</a></p>
+<p>Magnus, J. R., &amp; Neudecker, H. (2019).
+Matrix  differential  calculus with  applications  in  statistics  and  econometrics.
+Wiley.
+<a href='https://doi.org/10.1002/9781119541219'>https://doi.org/10.1002/9781119541219</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other Linear Algebra Functions: 
-<code><a href='dcap.html'>dcap</a>()</code>,
+    <div class='dont-index'><p>Other Vectorization Functions: 
 <code><a href='diag_of_vech.html'>diag_of_vech</a>()</code>,
-<code><a href='mcap_cor.html'>mcap_cor</a>()</code>,
-<code><a href='mcap_diag.html'>mcap_diag</a>()</code>,
-<code><a href='mcap_sym.html'>mcap_sym</a>()</code>,
-<code><a href='sym_of_vechs.html'>sym_of_vechs</a>()</code>,
-<code><a href='sym_of_vech.html'>sym_of_vech</a>()</code>,
-<code><a href='test_positive_definite.html'>test_positive_definite</a>()</code>,
 <code><a href='vechnames.html'>vechnames</a>()</code>,
 <code><a href='vechsnames.html'>vechsnames</a>()</code>,
 <code><a href='vechs.html'>vechs</a>()</code>,
@@ -171,7 +179,7 @@ from the elements of an \(m \times n\) matrix.</p>
     <p>Ivan Jacob Agaloos Pesigan</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span>
+    <pre class="examples"><div class='input'><span class='va'>A</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span>
   data <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span>
     <span class='fl'>1.0</span>, <span class='fl'>0.5</span>, <span class='fl'>0.4</span>,
     <span class='fl'>0.5</span>, <span class='fl'>1.0</span>, <span class='fl'>0.6</span>,
@@ -180,7 +188,7 @@ from the elements of an \(m \times n\) matrix.</p>
   ncol <span class='op'>=</span> <span class='fl'>3</span>
 <span class='op'>)</span>
 
-<span class='fu'>vec</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
+<span class='fu'>vec</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 1.0 0.5 0.4 0.5 1.0 0.6 0.4 0.6 1.0</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

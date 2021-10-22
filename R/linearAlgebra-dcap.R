@@ -1,39 +1,38 @@
-#' Duplication Matrix
+#' The Duplication Matrix
 #'
-#' Create a duplication matrix.
+#' Creates a duplication matrix.
 #'
 #' The duplication matrix
-#' \eqn{
-#' \mathbf{D}_{k}
-#' }
+#' \eqn{\mathbf{D}_{k}}
 #' is the
 #' \eqn{
-#' k^2 \times \frac{k \left( k + 1 \right)}{2}
+#'     k^2 \times \frac{1}{2} k \left( k + 1 \right)
 #' }
-#' matrix
-#' for a given
-#' \eqn{
-#' k \times k
-#' }
+#' matrix for a given
+#' \eqn{k \times k}
 #' symmetric matrix
-#' \eqn{
-#' \mathbf{A}
-#' }
+#' \eqn{\mathbf{A}}
 #' where
 #'
 #' \deqn{
 #'    \mathbf{D}_{k} \mathrm{vech} \left( \mathbf{A} \right)
 #'    =
 #'    \mathrm{vec} \left( \mathbf{A} \right)
+#'    \quad
+#'    \left(
+#'    \mathbf{A}
+#'    =
+#'    \mathbf{A}^{\prime}
+#'    \right)
 #' }
 #'
 #' \eqn{
-#' \mathrm{vec} \left( \cdot \right)
+#'     \mathrm{vec} \left( \cdot \right)
 #' }
 #' is the vectorization of a matrix,
 #' and
 #' \eqn{
-#' \mathrm{vech} \left( \cdot \right)
+#'     \mathrm{vech} \left( \cdot \right)
 #' }
 #' is the half-vectorization of a matrix.
 #'
@@ -62,20 +61,18 @@
 #' @examples
 #' dcap(3)
 #' @export
-#' @family Linear Algebra Functions
+#' @family Symmetric Functions
 #' @keywords linearAlgebra symmetric
 dcap <- function(x) {
   stopifnot(
     is.vector(x),
-    length(x) == 1
+    length(x) == 1,
+    x > 0
   )
-  m <- as.integer(x)
-  stopifnot(
-    m > 0
-  )
-  sym <- diag(m)
+  k <- as.integer(x)
+  sym <- diag(k)
   i <- seq_len(
-    0.5 * m * (m + 1)
+    0.5 * k * (k + 1)
   )
   sym[lower.tri(sym, diag = TRUE)] <- i
   sym[upper.tri(sym)] <- t(sym)[upper.tri(sym)]

@@ -28,29 +28,29 @@ library(linearAlgebra)
 <<>>=
 A <- matrix(c("a", "b", "b", "c"), ncol = 2)
 A
-vech_i <- c("a", "b", "c")
-vechs_i <- "b"
-diags_i <- c("a", "c")
+vechA <- c("a", "b", "c")
+vechsA <- "b"
+diagsA <- c("a", "c")
 @
 
 \section*{Elements}
 
 <<>>=
-diag_of_vech(vech_i)
+diag_of_vech(vechA)
 @
 
 \section*{Index}
 
 <<>>=
-diag_of_vech(vech_i, loc = TRUE)
+diag_of_vech(vechA, loc = TRUE)
 @
 
 <<echo = FALSE>>=
 rm(
   A,
-  vech_i,
-  vechs_i,
-  diags_i
+  vechA,
+  vechsA,
+  diagsA
 )
 @
 

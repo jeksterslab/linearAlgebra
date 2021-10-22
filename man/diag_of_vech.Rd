@@ -21,9 +21,12 @@ A vector.
 Diagonals of a matrix from its half-vectorization.
 }
 \details{
-Generates a vector of length \eqn{m}
+Generates a vector of length
+\eqn{k}
 of diagonal elements or location in the input vector
-of an \eqn{m \times m} symmetric matrix.
+of an
+\eqn{k \times k}
+matrix.
 }
 \examples{
 A <- matrix(
@@ -43,14 +46,7 @@ diag_of_vech(vechA, loc = TRUE)
 \href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Half-vectorization}{Wikipedia: Half-vectorization}
 }
 \seealso{
-Other Linear Algebra Functions: 
-\code{\link{dcap}()},
-\code{\link{mcap_cor}()},
-\code{\link{mcap_diag}()},
-\code{\link{mcap_sym}()},
-\code{\link{sym_of_vechs}()},
-\code{\link{sym_of_vech}()},
-\code{\link{test_positive_definite}()},
+Other Vectorization Functions: 
 \code{\link{vechnames}()},
 \code{\link{vechsnames}()},
 \code{\link{vechs}()},
@@ -60,6 +56,6 @@ Other Linear Algebra Functions:
 \author{
 Ivan Jacob Agaloos Pesigan
 }
-\concept{Linear Algebra Functions}
+\concept{Vectorization Functions}
 \keyword{linearAlgebra}
-\keyword{symmetric}
+\keyword{vectorization}

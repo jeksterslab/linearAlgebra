@@ -16,11 +16,22 @@ A vector.
 Vectorize a matrix.
 }
 \details{
-Generates a vector of length \eqn{mn}
-from the elements of an \eqn{m \times n} matrix.
+The vectorization of an
+\eqn{m \times n}
+matrix
+\eqn{\mathbf{A}},
+given by
+\eqn{
+    \mathrm{vec} \left( \mathbf{A} \right)
+},
+is the
+\eqn{mn \times 1}
+vector obtained by stacking the elements of
+\eqn{\mathbf{A}}
+column-wise.
 }
 \examples{
-x <- matrix(
+A <- matrix(
   data = c(
     1.0, 0.5, 0.4,
     0.5, 1.0, 0.6,
@@ -29,21 +40,19 @@ x <- matrix(
   ncol = 3
 )
 
-vec(x)
+vec(A)
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)}{Wikipedia: Vectorization}
+
+Magnus, J. R., & Neudecker, H. (2019).
+Matrix  differential  calculus with  applications  in  statistics  and  econometrics.
+Wiley.
+\url{https://doi.org/10.1002/9781119541219}
 }
 \seealso{
-Other Linear Algebra Functions: 
-\code{\link{dcap}()},
+Other Vectorization Functions: 
 \code{\link{diag_of_vech}()},
-\code{\link{mcap_cor}()},
-\code{\link{mcap_diag}()},
-\code{\link{mcap_sym}()},
-\code{\link{sym_of_vechs}()},
-\code{\link{sym_of_vech}()},
-\code{\link{test_positive_definite}()},
 \code{\link{vechnames}()},
 \code{\link{vechsnames}()},
 \code{\link{vechs}()},
@@ -52,6 +61,6 @@ Other Linear Algebra Functions:
 \author{
 Ivan Jacob Agaloos Pesigan
 }
-\concept{Linear Algebra Functions}
+\concept{Vectorization Functions}
 \keyword{linearAlgebra}
 \keyword{vectorization}

@@ -2,8 +2,19 @@
 #'
 #' Vectorize a matrix.
 #'
-#' Generates a vector of length \eqn{mn}
-#' from the elements of an \eqn{m \times n} matrix.
+#' The vectorization of an
+#' \eqn{m \times n}
+#' matrix
+#' \eqn{\mathbf{A}},
+#' given by
+#' \eqn{
+#'     \mathrm{vec} \left( \mathbf{A} \right)
+#' },
+#' is the
+#' \eqn{mn \times 1}
+#' vector obtained by stacking the elements of
+#' \eqn{\mathbf{A}}
+#' column-wise.
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
@@ -12,10 +23,15 @@
 #' @references
 #' [Wikipedia: Vectorization](https://en.wikipedia.org/wiki/Vectorization_(mathematics))
 #'
+#' Magnus, J. R., & Neudecker, H. (2019).
+#' Matrix  differential  calculus with  applications  in  statistics  and  econometrics.
+#' Wiley.
+#' [https://doi.org/10.1002/9781119541219](https://doi.org/10.1002/9781119541219)
+#'
 #' @returns A vector.
 #'
 #' @examples
-#' x <- matrix(
+#' A <- matrix(
 #'   data = c(
 #'     1.0, 0.5, 0.4,
 #'     0.5, 1.0, 0.6,
@@ -24,9 +40,9 @@
 #'   ncol = 3
 #' )
 #'
-#' vec(x)
+#' vec(A)
 #' @export
-#' @family Linear Algebra Functions
+#' @family Vectorization Functions
 #' @keywords linearAlgebra vectorization
 vec <- function(x) {
   return(

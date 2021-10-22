@@ -2,9 +2,15 @@
 #'
 #' Symmetric matrix from its strict half-vectorization.
 #'
-#' Generates an \eqn{m \times m} symmetric matrix
-#' from an \eqn{(m(m + 1) / 2) - m} vector.
-#' The \eqn{m \times 1} vector of diagonal values should be supplied.
+#' Generates an
+#' \eqn{k \times k}
+#' symmetric matrix
+#' from a
+#' \eqn{\frac{1}{2}(k(k + 1)) - k}
+#' vector.
+#' The
+#' \eqn{k \times 1}
+#' vector of diagonal values should be supplied.
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
@@ -30,27 +36,27 @@
 #'
 #' sym_of_vechs(vechsA, diags = 1)
 #' @export
-#' @family Linear Algebra Functions
+#' @family Symmetric Functions
 #' @keywords linearAlgebra symmetric
 sym_of_vechs <- function(x, diags) {
-  # m = m by m dimensions of the symmetric matrix
-  # length(x) = m(m + 1) / 2 solve for m
+  # k = k by k dimensions of the symmetric matrix
+  # length(x) = k(k + 1) / 2 solve for k
   # output = symmetric matrix output
   stopifnot(
     is.vector(x),
     is.vector(diags)
   )
-  m <- 0.5 * (sqrt(1 + 8 * length(x)) + 1)
-  output <- matrix(
-    data = 0,
-    nrow = m,
-    ncol = m
-  )
-  if (nrow(output) != m) {
+  k <- 0.5 * (sqrt(1 + 8 * length(x)) + 1)
+  if (k %% 1 != 0) {
     stop("Length of \"x\" is not valid.")
   }
-  diags_m <- length(diags)
-  stopifnot(diags_m == 1 || diags_m == m)
+  output <- matrix(
+    data = 0,
+    nrow = k,
+    ncol = k
+  )
+  diags_k <- length(diags)
+  stopifnot(diags_k == 1 || diags_k == k)
   output[lower.tri(output, diag = FALSE)] <- x
   output[upper.tri(output)] <- t(output)[upper.tri(output)]
   diag(output) <- diags

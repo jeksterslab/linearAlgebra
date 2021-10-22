@@ -20,7 +20,10 @@ is a positive definite matrix,
 and \code{FALSE} otherwise.
 }
 \details{
-An \eqn{m \times m} symmetric matrix \eqn{\mathbf{A}}
+A
+\eqn{k \times k}
+symmetric matrix
+\eqn{\mathbf{A}}
 is positive definite
 if all of its eigenvalues are positive.
 
@@ -42,21 +45,6 @@ test_positive_definite(
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Definite_matrix}{Wikipedia: Definite matrix}
-}
-\seealso{
-Other Linear Algebra Functions: 
-\code{\link{dcap}()},
-\code{\link{diag_of_vech}()},
-\code{\link{mcap_cor}()},
-\code{\link{mcap_diag}()},
-\code{\link{mcap_sym}()},
-\code{\link{sym_of_vechs}()},
-\code{\link{sym_of_vech}()},
-\code{\link{vechnames}()},
-\code{\link{vechsnames}()},
-\code{\link{vechs}()},
-\code{\link{vech}()},
-\code{\link{vec}()}
 }
 \author{
 Ivan Jacob Agaloos Pesigan

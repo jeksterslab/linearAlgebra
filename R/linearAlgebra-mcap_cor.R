@@ -1,51 +1,51 @@
-#' Correlation Pattern Matrix
+#' The Correlation Pattern Matrix
 #'
-#' Create a correlation pattern matrix.
+#' Creates a correlation pattern matrix.
 #'
 #' \eqn{
-#'   \mathbf{M}_{k}
-#'   \left(
-#'   c
-#'   \right)
+#'     \mathbf{M}_{k}
+#'     \left(
+#'     c
+#'     \right)
 #' }
 #' is the
 #' \eqn{
-#' k \times k
+#'     k \times k
 #' }
 #' correlation pattern matrix with
 #'
 #' \deqn{
-#'   \left(
-#' 	 \mathbf{M}_{k}
-#' 	 \left(
-#' 	 c
-#' 	 \right)
-#' 	 \right)_{ij, gh}
-#' 	 =
-#' 	 \begin{cases}
-#'      \frac{1}{2}
-#' 		  &
-#' 		\text{if}
-#' 		\quad
-#' 		\left( i, j \right) = \left( g, h \right)
-#' 		\text{or}
-#' 		\left( i, j \right) = \left( h, g \right),
-#' 		\quad
-#' 		i \neq j
-#' 		,
-#' 		g \neq h, \\
-#' 		0
-#' 		  &
-#' 		\text{if}
-#' 		\quad
-#' 		i = j = g = h
-#' 	    ,
-#' 		\\
-#' 		0
-#' 		  &
-#' 		\text{otherwise}
-#' 		.
-#' 	\end{cases}
+#'     \left(
+#' 	   \mathbf{M}_{k}
+#' 	   \left(
+#' 	   c
+#' 	   \right)
+#' 	   \right)_{ij, gh}
+#' 	   =
+#' 	   \begin{cases}
+#'         \frac{1}{2}
+#' 		   &
+#' 		   \text{if}
+#' 		   \quad
+#' 		   \left( i, j \right) = \left( g, h \right)
+#' 		   \text{or}
+#' 		   \left( i, j \right) = \left( h, g \right),
+#' 		   \quad
+#' 		   i \neq j
+#' 	       ,
+#' 		   g \neq h, \\
+#' 		   0
+#' 		   &
+#' 		   \text{if}
+#' 		   \quad
+#' 		   i = j = g = h
+#' 	       ,
+#' 		   \\
+#' 		   0
+#' 		   &
+#' 		   \text{otherwise}
+#' 		   .
+#'     \end{cases}
 #' }
 #'
 #' @author Ivan Jacob Agaloos Pesigan
@@ -65,7 +65,7 @@
 #' @examples
 #' mcap_cor(3)
 #' @export
-#' @family Linear Algebra Functions
+#' @family Symmetric Functions
 #' @keywords linearAlgebra symmetric
 mcap_cor <- function(x) {
   output <- mcap_sym(x)

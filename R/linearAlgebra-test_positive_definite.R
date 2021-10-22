@@ -4,7 +4,10 @@
 #' is a positive definite matrix,
 #' and `FALSE` otherwise.
 #'
-#' An \eqn{m \times m} symmetric matrix \eqn{\mathbf{A}}
+#' A
+#' \eqn{k \times k}
+#' symmetric matrix
+#' \eqn{\mathbf{A}}
 #' is positive definite
 #' if all of its eigenvalues are positive.
 #'
@@ -40,7 +43,6 @@ test_positive_definite <- function(x,
                                    tol = 1e-8) {
   stopifnot(
     is.matrix(x),
-    dim(x)[1] == dim(x)[2],
     x == t(x)
   )
   return(

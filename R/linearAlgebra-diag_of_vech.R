@@ -2,9 +2,12 @@
 #'
 #' Diagonals of a matrix from its half-vectorization.
 #'
-#' Generates a vector of length \eqn{m}
+#' Generates a vector of length
+#' \eqn{k}
 #' of diagonal elements or location in the input vector
-#' of an \eqn{m \times m} symmetric matrix.
+#' of an
+#' \eqn{k \times k}
+#' matrix.
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
@@ -33,17 +36,20 @@
 #' diag_of_vech(vechA, loc = FALSE)
 #' diag_of_vech(vechA, loc = TRUE)
 #' @export
-#' @family Linear Algebra Functions
-#' @keywords linearAlgebra symmetric
+#' @family Vectorization Functions
+#' @keywords linearAlgebra vectorization
 diag_of_vech <- function(x,
                          loc = FALSE) {
-  # m = m by m dimensions of the symmetric matrix
-  # length(x) = m(m + 1) / 2 solve for m
+  # k = k by k dimensions of the symmetric matrix
+  # length(x) = k(k + 1) / 2 solve for k
   stopifnot(
     is.vector(x),
     is.logical(loc)
   )
-  m <- floor(0.5 * (sqrt(1 + 8 * length(x)) - 1))
+  k <- 0.5 * (sqrt(1 + 8 * length(x)) - 1)
+  if (k %% 1 != 0) {
+    stop("Length of \"x\" is not valid.")
+  }
   if (length(x) == 1) {
     if (loc) {
       return(1)
@@ -52,15 +58,15 @@ diag_of_vech <- function(x,
     }
   }
   i <- sapply(
-    X = seq_len(m),
-    FUN = function(i, m) {
-      m * (i - 1) + 1 - (
+    X = seq_len(k),
+    FUN = function(i, k) {
+      k * (i - 1) + 1 - (
         (
           (i - 2) * (i - 1)
         ) / 2
       )
     },
-    m = m
+    k = k
   )
   if (loc) {
     return(i)

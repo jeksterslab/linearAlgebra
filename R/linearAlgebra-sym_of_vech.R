@@ -2,8 +2,12 @@
 #'
 #' Symmetric matrix from its half-vectorization.
 #'
-#' Generates an \eqn{m \times m} symmetric matrix
-#' from an \eqn{m(m + 1) / 2} vector.
+#' Generates an
+#' \eqn{k \times k}
+#' symmetric matrix
+#' from a
+#' \eqn{\frac{1}{2}k(k + 1)}
+#' vector.
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
@@ -27,22 +31,22 @@
 #'
 #' sym_of_vech(vechA)
 #' @export
-#' @family Linear Algebra Functions
+#' @family Symmetric Functions
 #' @keywords linearAlgebra symmetric
 sym_of_vech <- function(x) {
-  # m = m by m dimensions of the symmetric matrix
-  # length(x) = m(m + 1) / 2 solve for m
+  # k = k by k dimensions of the symmetric matrix
+  # length(x) = k(k + 1) / 2 solve for k
   # output = symmetric matrix output
   stopifnot(is.vector(x))
-  m <- 0.5 * (sqrt(1 + 8 * length(x)) - 1)
-  output <- matrix(
-    data = 0,
-    nrow = m,
-    ncol = m
-  )
-  if (nrow(output) != m) {
+  k <- 0.5 * (sqrt(1 + 8 * length(x)) - 1)
+  if (k %% 1 != 0) {
     stop("Length of \"x\" is not valid.")
   }
+  output <- matrix(
+    data = 0,
+    nrow = k,
+    ncol = k
+  )
   output[lower.tri(output, diag = TRUE)] <- x
   output[upper.tri(output)] <- t(output)[upper.tri(output)]
   return(output)

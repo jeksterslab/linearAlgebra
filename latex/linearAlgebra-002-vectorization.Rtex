@@ -2,6 +2,9 @@
 
 \input{latex/preamble/preamble}
 
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
+\addbibresource{bib/Lib-Linear-Algebra-Books.bib}
+
 \title{Vectorization}
 \author{Ivan Jacob Agaloos Pesigan}
 \date{}
@@ -25,37 +28,78 @@ source(
 library(linearAlgebra)
 @
 
+\section*{Vectorize}
+
+\input{latex/equations/linearAlgebra-vec-let}
+
+\input{latex/equations/linearAlgebra-vec-example}
+
 <<>>=
-A <- matrix(c("a", "b", "b", "c"), ncol = 2)
-colnames(A) <- rownames(A) <- c("v1", "v2")
+A <- matrix(c("a11", "a21", "a31", "a12", "a22", "a32"), ncol = 2)
 A
 @
-
-\section*{Vectorize}
 
 <<>>=
 vec(A)
 @
 
+\newpage
+
 \section*{Half-Vectorize}
+
+\input{latex/equations/linearAlgebra-vech-let}
+
+\input{latex/equations/linearAlgebra-vech-example}
+
+<<>>=
+A <- matrix(c("a11", "a21", "a12", "a22"), ncol = 2)
+A
+@
 
 <<>>=
 vech(A)
 @
 
+\newpage
+
 \section*{Strict Half-Vectorize}
+
+\input{latex/equations/linearAlgebra-vechs-let}
+
+\input{latex/equations/linearAlgebra-vechs-example}
+
+<<>>=
+A <- matrix(c("a11", "a21", "a12", "a22"), ncol = 2)
+A
+@
 
 <<>>=
 vechs(A)
 @
 
+\newpage
+
 \section*{Names for Half-Vectorization}
+
+<<>>=
+A <- matrix(c("a11", "a21", "a12", "a22"), ncol = 2)
+colnames(A) <- rownames(A) <- c("v1", "v2")
+A
+@
 
 <<>>=
 vechnames(colnames(A))
 @
 
+\newpage
+
 \section*{Names for Strict Half-Vectorization}
+
+<<>>=
+A <- matrix(c("a11", "a21", "a12", "a22"), ncol = 2)
+colnames(A) <- rownames(A) <- c("v1", "v2")
+A
+@
 
 <<>>=
 vechsnames(colnames(A))
@@ -64,5 +108,15 @@ vechsnames(colnames(A))
 <<echo = FALSE>>=
 rm(A)
 @
+
+\newpage
+
+\section*{Readings}
+
+See \Textcite{Magnus-2019} p. 56--57 and 444
+and
+\Textcite{Abadir-2005} ch. 10--11.
+
+\printbibliography
 
 \end{document}

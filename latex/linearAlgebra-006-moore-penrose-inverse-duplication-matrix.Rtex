@@ -1,0 +1,92 @@
+\documentclass{article}
+
+\input{latex/preamble/preamble}
+
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
+\addbibresource{bib/Lib-Linear-Algebra-Books.bib}
+\addbibresource{bib/Lib-Linear-Algebra.bib}
+
+\title{The Moore-Penrose Inverse of the Duplication Matrix}
+\author{Ivan Jacob Agaloos Pesigan}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+<<echo=FALSE>>=
+root <- rprojroot::is_rstudio_project
+source(
+  root$find_file(
+    "latex",
+    "R_scripts",
+    "start.R"
+  )
+)
+@
+
+\input{latex/equations/linearAlgebra-pinv-of-dcap-let}
+
+\input{latex/equations/linearAlgebra-pinv-of-dcap}
+
+\noindent where
+
+\input{latex/equations/linearAlgebra-pinv-of-dcap-2}
+
+\input{latex/equations/linearAlgebra-pinv-of-dcap-where}
+
+\newpage
+
+\section*{Examples}
+
+<<eval = FALSE>>=
+library(linearAlgebra)
+@
+
+
+<<>>=
+A <- matrix(
+  data = c(
+    1.0, 0.5, 0.4,
+    0.5, 1.0, 0.6,
+    0.4, 0.6, 1.0
+  ),
+  ncol = 3
+)
+k <- dim(A)[1]
+@
+
+<<>>=
+pinv_of_dcap(dcap(k))
+@
+
+<<>>=
+pinv_of_dcap(dcap(k)) %*% vec(A)
+@
+
+<<>>=
+all.equal(
+  c(pinv_of_dcap(dcap(k)) %*% vec(A)),
+  vech(A)
+)
+@
+
+<<echo = FALSE>>=
+rm(
+  A,
+  k
+)
+@
+
+\newpage
+
+\section*{Readings}
+
+See \Textcite{Magnus-2019} p. 56--57 and 444,
+\Textcite{Magnus-1980},
+and
+\Textcite{Abadir-2005} ch. 11.
+
+\printbibliography
+
+\end{document}

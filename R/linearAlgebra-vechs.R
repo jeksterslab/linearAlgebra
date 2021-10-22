@@ -1,18 +1,41 @@
 #' Strict Half-Vectorize
 #'
 #' Apply a strict half-vectorization,
-#' that is, half-vectorize an \eqn{m \times m}
-#' symmetric matrix without the diagonal elements.
+#' that is, half-vectorize an
+#' \eqn{k \times k}
+#' matrix
+#' without the diagonal elements.
 #'
-#' Generates an \eqn{(m(m + 1) / 2) - m} vector
-#' from the unique elements
-#' of an \eqn{m \times m} symmetric matrix,
-#' excluding the diagonals,
-#' by stacking the columns (column-major).
-#'
-#' @details
-#' # Dependencies
-#' * [vechsnames()]
+#' The strict half-vectorization of a
+#' \eqn{k \times k}
+#' matrix
+#' \eqn{\mathbf{A}},
+#' given by
+#' \eqn{
+#'     \mathrm{vechs} \left( \mathbf{A} \right)
+#' },
+#' is the
+#' \eqn{
+#'     \frac{1}{2}
+#'     k
+#'     \left(
+#'     k + 1
+#'     \right)
+#'     -
+#'     k
+#'     \times
+#'     1
+#' }
+#' vector obtained from
+#' the vectorization of
+#' \eqn{\mathbf{A}},
+#' given by
+#' \eqn{
+#'     \mathrm{vec} \left( \mathbf{A} \right)
+#' },
+#' where that all diagonal and upper diagonal elements of
+#' \eqn{\mathbf{A}}
+#' are eliminated.
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
@@ -25,7 +48,7 @@
 #' @returns A vector.
 #'
 #' @examples
-#' x <- matrix(
+#' A <- matrix(
 #'   data = c(
 #'     1.0, 0.5, 0.4,
 #'     0.5, 1.0, 0.6,
@@ -34,10 +57,10 @@
 #'   ncol = 3
 #' )
 #'
-#' vechs(x)
+#' vechs(A)
 #' @export
-#' @family Linear Algebra Functions
-#' @keywords linearAlgebra symmetric vectorization
+#' @family Vectorization Functions
+#' @keywords linearAlgebra vectorization
 vechs <- function(x,
                   names = FALSE,
                   sep = ".") {

@@ -19,9 +19,15 @@ A vector.
 Symmetric matrix from its strict half-vectorization.
 }
 \details{
-Generates an \eqn{m \times m} symmetric matrix
-from an \eqn{(m(m + 1) / 2) - m} vector.
-The \eqn{m \times 1} vector of diagonal values should be supplied.
+Generates an
+\eqn{k \times k}
+symmetric matrix
+from a
+\eqn{\frac{1}{2}(k(k + 1)) - k}
+vector.
+The
+\eqn{k \times 1}
+vector of diagonal values should be supplied.
 }
 \examples{
 A <- matrix(
@@ -40,23 +46,17 @@ sym_of_vechs(vechsA, diags = 1)
 \href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Half-vectorization}{Wikipedia: Half-vectorization}
 }
 \seealso{
-Other Linear Algebra Functions: 
+Other Symmetric Functions: 
 \code{\link{dcap}()},
-\code{\link{diag_of_vech}()},
 \code{\link{mcap_cor}()},
 \code{\link{mcap_diag}()},
 \code{\link{mcap_sym}()},
-\code{\link{sym_of_vech}()},
-\code{\link{test_positive_definite}()},
-\code{\link{vechnames}()},
-\code{\link{vechsnames}()},
-\code{\link{vechs}()},
-\code{\link{vech}()},
-\code{\link{vec}()}
+\code{\link{pinv_of_dcap}()},
+\code{\link{sym_of_vech}()}
 }
 \author{
 Ivan Jacob Agaloos Pesigan
 }
-\concept{Linear Algebra Functions}
+\concept{Symmetric Functions}
 \keyword{linearAlgebra}
 \keyword{symmetric}

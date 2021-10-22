@@ -2,7 +2,7 @@
 % Please edit documentation in R/linearAlgebra-mcap_sym.R
 \name{mcap_sym}
 \alias{mcap_sym}
-\title{Symmetric Pattern Matrix}
+\title{The Symmetric Pattern Matrix}
 \usage{
 mcap_sym(x)
 }
@@ -14,51 +14,51 @@ Dimension of the symmetric matrix.}
 A matrix.
 }
 \description{
-Create a symmetric pattern matrix.
+Creates a symmetric pattern matrix.
 }
 \details{
 \eqn{
-\mathbf{M}_{k}
-\left(
-s
-\right)
+    \mathbf{M}_{k}
+    \left(
+    s
+    \right)
 }
 is the
 \eqn{
-k \times k
+    k \times k
 }
 symmetric pattern matrix with
 
 \deqn{
-	\left(
-	\mathbf{M}_{k}
-	\left(
-	s
-	\right)
-	\right)_{ij, gh}
-	=
-	\begin{cases}
-		1
-		  &
-		\text{if}
-		\quad
-		i = j = g = h
-		,
-		\\
-		\frac{1}{2}
-		  &
-		\text{if}
-		\quad
-		\left( i, j \right) = \left( g, h \right)
-		\text{or}
-		\left( i, j \right) = \left( h, g \right)
-		,
-		\\
-		0
-		  &
-		\text{otherwise}
-		.
-	\end{cases}
+    \left(
+	   \mathbf{M}_{k}
+	   \left(
+	   s
+	   \right)
+	   \right)_{ij, gh}
+    =
+	   \begin{cases}
+	       1
+		   &
+		   \text{if}
+		   \quad
+		   i = j = g = h
+	       ,
+		   \\
+		   \frac{1}{2}
+		   &
+		   \text{if}
+		   \quad
+		   \left( i, j \right) = \left( g, h \right)
+		   \text{or}
+		   \left( i, j \right) = \left( h, g \right)
+		   ,
+		   \\
+		   0
+		   &
+		   \text{otherwise}
+		   .
+    \end{cases}
 }
 }
 \examples{
@@ -72,23 +72,17 @@ Linear Algebra and its Applications,
 https://doi.org/10.1016/0024-3795(85)90191-0
 }
 \seealso{
-Other Linear Algebra Functions: 
+Other Symmetric Functions: 
 \code{\link{dcap}()},
-\code{\link{diag_of_vech}()},
 \code{\link{mcap_cor}()},
 \code{\link{mcap_diag}()},
+\code{\link{pinv_of_dcap}()},
 \code{\link{sym_of_vechs}()},
-\code{\link{sym_of_vech}()},
-\code{\link{test_positive_definite}()},
-\code{\link{vechnames}()},
-\code{\link{vechsnames}()},
-\code{\link{vechs}()},
-\code{\link{vech}()},
-\code{\link{vec}()}
+\code{\link{sym_of_vech}()}
 }
 \author{
 Ivan Jacob Agaloos Pesigan
 }
-\concept{Linear Algebra Functions}
+\concept{Symmetric Functions}
 \keyword{linearAlgebra}
 \keyword{symmetric}

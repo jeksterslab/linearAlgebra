@@ -19,8 +19,8 @@
 #' colnames(x) <- rownames(x) <- c("x1", "x2", "x3")
 #' vechsnames(colnames(x))
 #' @export
-#' @family Linear Algebra Functions
-#' @keywords linearAlgebra symmetric vectorization
+#' @family Vectorization Functions
+#' @keywords linearAlgebra vectorization
 vechsnames <- function(x,
                        sep = ".") {
   stopifnot(
@@ -32,9 +32,11 @@ vechsnames <- function(x,
   for (i in seq_len(dim(ind)[1])) {
     output[[i]] <- x[ind[i, ]]
   }
-  paste0(
-    output[[1]],
-    sep,
-    output[[2]]
+  return(
+    paste0(
+      output[[1]],
+      sep,
+      output[[2]]
+    )
   )
 }

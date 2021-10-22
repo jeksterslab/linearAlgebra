@@ -91,7 +91,7 @@ testthat::test_that("test-linearAlgebra-sym_of_vechs error", {
 })
 testthat::test_that("test-linearAlgebra-sym_of_vechs error", {
   testthat::expect_error(
-    sym_of_vechs(rnorm(n = 4), diags = 1)
+    sym_of_vechs(1:4, diags = 1)
   )
 })
 # clean environment

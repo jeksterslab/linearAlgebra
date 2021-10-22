@@ -1,40 +1,40 @@
-#' Diagonal Pattern Matrix
+#' The Diagonal Pattern Matrix
 #'
-#' Create a diagonal pattern matrix.
+#' Creates a diagonal pattern matrix.
 #'
 #' \eqn{
-#' \mathbf{M}_{k}
-#' \left(
-#' d
-#' \right)
+#'     \mathbf{M}_{k}
+#'     \left(
+#'     d
+#'     \right)
 #' }
 #' is the
 #' \eqn{
-#' k \times k
+#'     k \times k
 #' }
 #' diagonal pattern matrix with
 #'
 #' \deqn{
-#' 	\left(
-#' 	\mathbf{M}_{k}
-#' 	\left(
-#' 	d
-#' 	\right)
-#' 	\right)_{ij, gh}
-#' 	=
-#' 	\begin{cases}
-#' 		1
-#' 		  &
-#' 		\text{if}
-#' 		\quad
-#' 		i = j = g = h
-#' 		,
-#' 		\\
-#' 		0
-#' 		  &
-#' 		\text{otherwise}
-#' 		.
-#' 	\end{cases}
+#'     \left(
+#' 	   \mathbf{M}_{k}
+#' 	   \left(
+#'     d
+#' 	   \right)
+#' 	   \right)_{ij, gh}
+#' 	   =
+#' 	   \begin{cases}
+#' 	       1
+#' 		   &
+#' 		   \text{if}
+#' 		   \quad
+#' 		   i = j = g = h
+#' 		   ,
+#' 		   \\
+#' 	       0
+#' 		   &
+#' 		   \text{otherwise}
+#' 		   .
+#'     \end{cases}
 #' }
 #'
 #' @author Ivan Jacob Agaloos Pesigan
@@ -54,7 +54,7 @@
 #' @examples
 #' mcap_diag(3)
 #' @export
-#' @family Linear Algebra Functions
+#' @family Symmetric Functions
 #' @keywords linearAlgebra symmetric
 mcap_diag <- function(x) {
   return(

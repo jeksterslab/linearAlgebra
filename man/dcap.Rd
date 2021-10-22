@@ -2,7 +2,7 @@
 % Please edit documentation in R/linearAlgebra-dcap.R
 \name{dcap}
 \alias{dcap}
-\title{Duplication Matrix}
+\title{The Duplication Matrix}
 \usage{
 dcap(x)
 }
@@ -14,41 +14,40 @@ Dimension of the symmetric matrix.}
 A matrix.
 }
 \description{
-Create a duplication matrix.
+Creates a duplication matrix.
 }
 \details{
 The duplication matrix
-\eqn{
-\mathbf{D}_{k}
-}
+\eqn{\mathbf{D}_{k}}
 is the
 \eqn{
-k^2 \times \frac{k \left( k + 1 \right)}{2}
+    k^2 \times \frac{1}{2} k \left( k + 1 \right)
 }
-matrix
-for a given
-\eqn{
-k \times k
-}
+matrix for a given
+\eqn{k \times k}
 symmetric matrix
-\eqn{
-\mathbf{A}
-}
+\eqn{\mathbf{A}}
 where
 
 \deqn{
    \mathbf{D}_{k} \mathrm{vech} \left( \mathbf{A} \right)
    =
    \mathrm{vec} \left( \mathbf{A} \right)
+   \quad
+   \left(
+   \mathbf{A}
+   =
+   \mathbf{A}^{\prime}
+   \right)
 }
 
 \eqn{
-\mathrm{vec} \left( \cdot \right)
+    \mathrm{vec} \left( \cdot \right)
 }
 is the vectorization of a matrix,
 and
 \eqn{
-\mathrm{vech} \left( \cdot \right)
+    \mathrm{vech} \left( \cdot \right)
 }
 is the half-vectorization of a matrix.
 }
@@ -71,23 +70,17 @@ Wiley.
 \url{https://doi.org/10.1002/9781119541219}
 }
 \seealso{
-Other Linear Algebra Functions: 
-\code{\link{diag_of_vech}()},
+Other Symmetric Functions: 
 \code{\link{mcap_cor}()},
 \code{\link{mcap_diag}()},
 \code{\link{mcap_sym}()},
+\code{\link{pinv_of_dcap}()},
 \code{\link{sym_of_vechs}()},
-\code{\link{sym_of_vech}()},
-\code{\link{test_positive_definite}()},
-\code{\link{vechnames}()},
-\code{\link{vechsnames}()},
-\code{\link{vechs}()},
-\code{\link{vech}()},
-\code{\link{vec}()}
+\code{\link{sym_of_vech}()}
 }
 \author{
 Ivan Jacob Agaloos Pesigan
 }
-\concept{Linear Algebra Functions}
+\concept{Symmetric Functions}
 \keyword{linearAlgebra}
 \keyword{symmetric}

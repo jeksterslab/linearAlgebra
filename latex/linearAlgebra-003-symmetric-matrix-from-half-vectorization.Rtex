@@ -28,9 +28,9 @@ library(linearAlgebra)
 <<>>=
 A <- matrix(c("a", "b", "b", "c"), ncol = 2)
 A
-vech_i <- c("a", "b", "c")
-vechs_i <- "b"
-diags_i <- c("a", "c")
+vechA <- c("a", "b", "c")
+vechsA <- "b"
+diagsA <- c("a", "c")
 @
 
 \section*{Symmetric Matrix From Half-Vectorization}
@@ -38,21 +38,21 @@ diags_i <- c("a", "c")
 \subsection*{From Half-Vectorization}
 
 <<>>=
-sym_of_vech(vech_i)
+sym_of_vech(vechA)
 @
 
 \subsection*{Symmetric Matrix From Strict Half-Vectorization}
 
 <<>>=
-sym_of_vechs(vechs_i, diags = diags_i)
+sym_of_vechs(vechsA, diags = diagsA)
 @
 
 <<echo = FALSE>>=
 rm(
   A,
-  vech_i,
-  vechs_i,
-  diags_i
+  vechA,
+  vechsA,
+  diagsA
 )
 @
 

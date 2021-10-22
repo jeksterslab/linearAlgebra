@@ -1,49 +1,49 @@
-#' Symmetric Pattern Matrix
+#' The Symmetric Pattern Matrix
 #'
-#' Create a symmetric pattern matrix.
+#' Creates a symmetric pattern matrix.
 #'
 #' \eqn{
-#' \mathbf{M}_{k}
-#' \left(
-#' s
-#' \right)
+#'     \mathbf{M}_{k}
+#'     \left(
+#'     s
+#'     \right)
 #' }
 #' is the
 #' \eqn{
-#' k \times k
+#'     k \times k
 #' }
 #' symmetric pattern matrix with
 #'
 #' \deqn{
-#' 	\left(
-#' 	\mathbf{M}_{k}
-#' 	\left(
-#' 	s
-#' 	\right)
-#' 	\right)_{ij, gh}
-#' 	=
-#' 	\begin{cases}
-#' 		1
-#' 		  &
-#' 		\text{if}
-#' 		\quad
-#' 		i = j = g = h
-#' 		,
-#' 		\\
-#' 		\frac{1}{2}
-#' 		  &
-#' 		\text{if}
-#' 		\quad
-#' 		\left( i, j \right) = \left( g, h \right)
-#' 		\text{or}
-#' 		\left( i, j \right) = \left( h, g \right)
-#' 		,
-#' 		\\
-#' 		0
-#' 		  &
-#' 		\text{otherwise}
-#' 		.
-#' 	\end{cases}
+#'     \left(
+#' 	   \mathbf{M}_{k}
+#' 	   \left(
+#' 	   s
+#' 	   \right)
+#' 	   \right)_{ij, gh}
+#'     =
+#' 	   \begin{cases}
+#' 	       1
+#' 		   &
+#' 		   \text{if}
+#' 		   \quad
+#' 		   i = j = g = h
+#' 	       ,
+#' 		   \\
+#' 		   \frac{1}{2}
+#' 		   &
+#' 		   \text{if}
+#' 		   \quad
+#' 		   \left( i, j \right) = \left( g, h \right)
+#' 		   \text{or}
+#' 		   \left( i, j \right) = \left( h, g \right)
+#' 		   ,
+#' 		   \\
+#' 		   0
+#' 		   &
+#' 		   \text{otherwise}
+#' 		   .
+#'     \end{cases}
 #' }
 #'
 #' @author Ivan Jacob Agaloos Pesigan
@@ -62,15 +62,24 @@
 #'
 #' @examples
 #' mcap_sym(3)
-#' @importFrom MASS ginv
 #' @export
-#' @family Linear Algebra Functions
+#' @family Symmetric Functions
 #' @keywords linearAlgebra symmetric
 mcap_sym <- function(x) {
-  kcap <- MASS::ginv(dcap(x))
+  dcap <- dcap(x)
   return(
-    MASS::ginv(
-      X = kcap
-    ) %*% kcap
+    dcap %*% tcrossprod(
+      solve(
+        crossprod(dcap)
+      ),
+      dcap
+    )
   )
+  # code above is equivalent to code below but faster
+  # pinv_of_dcap <- pinv_of_dcap(dcap(x))
+  # return(
+  #  MASS::ginv(
+  #    X = pinv_of_dcap
+  #  ) %*% pinv_of_dcap
+  # )
 }

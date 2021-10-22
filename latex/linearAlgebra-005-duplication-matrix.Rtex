@@ -6,7 +6,7 @@
 \addbibresource{bib/Lib-Linear-Algebra-Books.bib}
 \addbibresource{bib/Lib-Linear-Algebra.bib}
 
-\title{Duplication Matrix}
+\title{The Duplication Matrix}
 \author{Ivan Jacob Agaloos Pesigan}
 \date{}
 
@@ -39,7 +39,6 @@ source(
 library(linearAlgebra)
 @
 
-
 <<>>=
 A <- matrix(
   data = c(
@@ -49,12 +48,20 @@ A <- matrix(
   ),
   ncol = 3
 )
-k_i <- dim(A)[1]
-dcap(k_i)
-dcap(k_i) %*% vech(A)
+k <- dim(A)[1]
+@
 
+<<>>=
+dcap(k)
+@
+
+<<>>=
+dcap(k) %*% vech(A)
+@
+
+<<>>=
 all.equal(
-  c(dcap(k_i) %*% vech(A)),
+  c(dcap(k) %*% vech(A)),
   vec(A)
 )
 @
@@ -62,13 +69,15 @@ all.equal(
 <<echo = FALSE>>=
 rm(
   A,
-  k_i
+  k
 )
 @
 
+\newpage
+
 \section*{Readings}
 
-See \Textcite{Magnus-2019} p. 56--57,
+See \Textcite{Magnus-2019} p. 56--57 and 444,
 \Textcite{Magnus-1980},
 and
 \Textcite{Abadir-2005} ch. 11.
