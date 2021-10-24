@@ -1,85 +1,24 @@
 #' The Symmetric Pattern Matrix
 #'
-#' Creates a symmetric pattern matrix.
-#'
-#' \eqn{
-#'     \mathbf{M}_{k}
-#'     \left(
-#'     s
-#'     \right)
-#' }
-#' is the
-#' \eqn{
-#'     k \times k
-#' }
-#' symmetric pattern matrix with
-#'
-#' \deqn{
-#'     \left(
-#' 	   \mathbf{M}_{k}
-#' 	   \left(
-#' 	   s
-#' 	   \right)
-#' 	   \right)_{ij, gh}
-#'     =
-#' 	   \begin{cases}
-#' 	       1
-#' 		   &
-#' 		   \text{if}
-#' 		   \quad
-#' 		   i = j = g = h
-#' 	       ,
-#' 		   \\
-#' 		   \frac{1}{2}
-#' 		   &
-#' 		   \text{if}
-#' 		   \quad
-#' 		   \left( i, j \right) = \left( g, h \right)
-#' 		   \text{or}
-#' 		   \left( i, j \right) = \left( h, g \right)
-#' 		   ,
-#' 		   \\
-#' 		   0
-#' 		   &
-#' 		   \text{otherwise}
-#' 		   .
-#'     \end{cases}
-#' }
-#'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
-#' @param x Integer.
-#'   Dimension of the symmetric matrix.
-#'
-#' @references
-#'   Nel, D. G. (1985).
-#'   A matrix derivation of the asymptotic covariance matrix of sample correlation coefficients.
-#'   Linear Algebra and its Applications,
-#'   67, 137--145.
-#'   https://doi.org/10.1016/0024-3795(85)90191-0
-#'
-#' @returns A matrix.
+#' @inherit .mcap_sym description details references return
+#' @inheritParams .dcap
 #'
 #' @examples
 #' mcap_sym(3)
-#' @export
 #' @family Symmetric Functions
 #' @keywords linearAlgebra symmetric
-mcap_sym <- function(x) {
-  dcap <- dcap(x)
-  return(
-    dcap %*% tcrossprod(
-      solve(
-        crossprod(dcap)
-      ),
-      dcap
+#' @export
+mcap_sym <- function(k) {
+  stopifnot(
+    is.vector(k),
+    length(k) == 1,
+    k > 0
+  )
+  .mcap_sym(
+    .dcap(
+      as.integer(k)
     )
   )
-  # code above is equivalent to code below but faster
-  # pinv_of_dcap <- pinv_of_dcap(dcap(x))
-  # return(
-  #  MASS::ginv(
-  #    X = pinv_of_dcap
-  #  ) %*% pinv_of_dcap
-  # )
 }

@@ -41,10 +41,10 @@
 
 <meta property="og:title" content="Strict Half-Vectorize — vechs" />
 <meta property="og:description" content="Apply a strict half-vectorization,
-that is, half-vectorize an
+that is,
+eliminate the diagonal and upper diagonal elements of a
 \(k \times k\)
-matrix
-without the diagonal elements." />
+matrix." />
 
 
 
@@ -132,10 +132,10 @@ without the diagonal elements." />
 
     <div class="ref-description">
     <p>Apply a strict half-vectorization,
-that is, half-vectorize an
+that is,
+eliminate the diagonal and upper diagonal elements of a
 \(k \times k\)
-matrix
-without the diagonal elements.</p>
+matrix.</p>
     </div>
 
     <pre class="usage"><span class='fu'>vechs</span><span class='op'>(</span><span class='va'>x</span>, names <span class='op'>=</span> <span class='cn'>FALSE</span>, sep <span class='op'>=</span> <span class='st'>"."</span><span class='op'>)</span></pre>
@@ -196,10 +196,18 @@ where that all diagonal and upper diagonal elements of
 are eliminated.</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    <p><a href='https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Half-vectorization'>Wikipedia: Half-vectorization</a></p>
+    <p><a href='https://en.wikipedia.org/wiki/Vectorization_(mathematics)'>Wikipedia: Vectorization</a></p>
+<p>Magnus, J. R., &amp; Neudecker, H. (2019).
+Matrix  differential  calculus with  applications  in  statistics  and  econometrics.
+Wiley.
+<a href='https://doi.org/10.1002/9781119541219'>https://doi.org/10.1002/9781119541219</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other Vectorization Functions: 
+<code><a href='.diag_of_vech.html'>.diag_of_vech</a>()</code>,
+<code><a href='.vechs.html'>.vechs</a>()</code>,
+<code><a href='.vech.html'>.vech</a>()</code>,
+<code><a href='.vec.html'>.vec</a>()</code>,
 <code><a href='diag_of_vech.html'>diag_of_vech</a>()</code>,
 <code><a href='vechnames.html'>vechnames</a>()</code>,
 <code><a href='vechsnames.html'>vechsnames</a>()</code>,
@@ -216,7 +224,7 @@ are eliminated.</p>
     <span class='fl'>0.5</span>, <span class='fl'>1.0</span>, <span class='fl'>0.6</span>,
     <span class='fl'>0.4</span>, <span class='fl'>0.6</span>, <span class='fl'>1.0</span>
   <span class='op'>)</span>,
-  ncol <span class='op'>=</span> <span class='fl'>3</span>
+  nrow <span class='op'>=</span> <span class='fl'>3</span>
 <span class='op'>)</span>
 
 <span class='fu'>vechs</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span>

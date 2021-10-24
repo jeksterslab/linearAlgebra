@@ -78,16 +78,16 @@ all.equal(
 @
 
 <<>>=
-pinv_of_dcap(dcap(k))
+pinv_of_dcap(k)
 @
 
 <<>>=
-pinv_of_dcap(dcap(k)) %*% vec(A)
+pinv_of_dcap(k) %*% vec(A)
 @
 
 <<>>=
 all.equal(
-  c(pinv_of_dcap(dcap(k)) %*% vec(A)),
+  c(pinv_of_dcap(k) %*% vec(A)),
   vech(A)
 )
 @

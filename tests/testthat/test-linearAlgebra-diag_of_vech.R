@@ -95,9 +95,8 @@ answer_i <- diag(
   cov(x_i)
 )
 result_i <- diag_of_vech(
-  vech(
-    cov(x_i),
-    names = FALSE
+  .vech(
+    cov(x_i)
   )
 )
 testthat::test_that("test-linearAlgebra-diag_of_vech random cov", {

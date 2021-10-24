@@ -2,13 +2,8 @@
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
-#' @param x Character vector of names.
 #' @inheritParams vechnames
-#'
-#' @references
-#' [Wikipedia: Half-vectorization](https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Half-vectorization)
-#'
-#' @returns A vector.
+#' @inherit vechnames return
 #'
 #' @examples
 #' x <- diag(2)
@@ -18,9 +13,9 @@
 #' x <- diag(3)
 #' colnames(x) <- rownames(x) <- c("x1", "x2", "x3")
 #' vechsnames(colnames(x))
-#' @export
 #' @family Vectorization Functions
 #' @keywords linearAlgebra vectorization
+#' @export
 vechsnames <- function(x,
                        sep = ".") {
   stopifnot(

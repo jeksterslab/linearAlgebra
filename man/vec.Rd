@@ -37,7 +37,7 @@ A <- matrix(
     0.5, 1.0, 0.6,
     0.4, 0.6, 1.0
   ),
-  ncol = 3
+  nrow = 3
 )
 
 vec(A)
@@ -52,6 +52,10 @@ Wiley.
 }
 \seealso{
 Other Vectorization Functions: 
+\code{\link{.diag_of_vech}()},
+\code{\link{.vechs}()},
+\code{\link{.vech}()},
+\code{\link{.vec}()},
 \code{\link{diag_of_vech}()},
 \code{\link{vechnames}()},
 \code{\link{vechsnames}()},

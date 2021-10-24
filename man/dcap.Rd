@@ -4,11 +4,11 @@
 \alias{dcap}
 \title{The Duplication Matrix}
 \usage{
-dcap(x)
+dcap(k)
 }
 \arguments{
-\item{x}{Integer.
-Dimension of the symmetric matrix.}
+\item{k}{Positive integer.
+Dimension of the \code{k} by \code{k} matrix.}
 }
 \value{
 A matrix.
@@ -57,6 +57,8 @@ dcap(3)
 \references{
 \href{https://en.wikipedia.org/wiki/Duplication_and_elimination_matrices#Duplication_matrix}{Wikipedia: Duplication matrix}
 
+\href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)}{Wikipedia: Vectorization}
+
 Magnus, J. R., & Neudecker, H. (1980).
 The elimination matrix: Some lemmas and applications.
 SIAM  Journal  on  Algebraic  Discrete  Methods,
@@ -71,6 +73,13 @@ Wiley.
 }
 \seealso{
 Other Symmetric Functions: 
+\code{\link{.dcap}()},
+\code{\link{.mcap_cor}()},
+\code{\link{.mcap_diag}()},
+\code{\link{.mcap_sym}()},
+\code{\link{.pinv_of_dcap}()},
+\code{\link{.sym_of_vechs}()},
+\code{\link{.sym_of_vech}()},
 \code{\link{mcap_cor}()},
 \code{\link{mcap_diag}()},
 \code{\link{mcap_sym}()},

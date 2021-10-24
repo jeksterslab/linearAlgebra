@@ -4,11 +4,11 @@
 \alias{mcap_cor}
 \title{The Correlation Pattern Matrix}
 \usage{
-mcap_cor(x)
+mcap_cor(k)
 }
 \arguments{
-\item{x}{Integer.
-Dimension of the symmetric matrix.}
+\item{k}{Positive integer.
+Dimension of the \code{k} by \code{k} matrix.}
 }
 \value{
 A matrix.
@@ -71,10 +71,17 @@ Nel, D. G. (1985).
 A matrix derivation of the asymptotic covariance matrix of sample correlation coefficients.
 Linear Algebra and its Applications,
 67, 137--145.
-\url{https://doi.org/10.1016/0024-3795(85)90191-0}
+https://doi.org/10.1016/0024-3795(85)90191-0
 }
 \seealso{
 Other Symmetric Functions: 
+\code{\link{.dcap}()},
+\code{\link{.mcap_cor}()},
+\code{\link{.mcap_diag}()},
+\code{\link{.mcap_sym}()},
+\code{\link{.pinv_of_dcap}()},
+\code{\link{.sym_of_vechs}()},
+\code{\link{.sym_of_vech}()},
 \code{\link{dcap}()},
 \code{\link{mcap_diag}()},
 \code{\link{mcap_sym}()},

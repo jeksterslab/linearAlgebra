@@ -13,7 +13,7 @@ vechsnames(x, sep = ".")
 Separator for variable names.}
 }
 \value{
-A vector.
+A character vector.
 }
 \description{
 Vector Names for Strict Half-Vectorization
@@ -27,11 +27,12 @@ x <- diag(3)
 colnames(x) <- rownames(x) <- c("x1", "x2", "x3")
 vechsnames(colnames(x))
 }
-\references{
-\href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Half-vectorization}{Wikipedia: Half-vectorization}
-}
 \seealso{
 Other Vectorization Functions: 
+\code{\link{.diag_of_vech}()},
+\code{\link{.vechs}()},
+\code{\link{.vech}()},
+\code{\link{.vec}()},
 \code{\link{diag_of_vech}()},
 \code{\link{vechnames}()},
 \code{\link{vechs}()},

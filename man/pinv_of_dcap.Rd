@@ -4,11 +4,11 @@
 \alias{pinv_of_dcap}
 \title{The Moore-Penrose Inverse of the Duplication Matrix}
 \usage{
-pinv_of_dcap(x)
+pinv_of_dcap(k)
 }
 \arguments{
-\item{x}{Numeric matrix
-The duplication matrix.}
+\item{k}{Positive integer.
+Dimension of the \code{k} by \code{k} matrix.}
 }
 \value{
 A matrix.
@@ -65,10 +65,12 @@ and
 is the half-vectorization of a matrix.
 }
 \examples{
-pinv_of_dcap(dcap(3))
+pinv_of_dcap(3)
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Duplication_and_elimination_matrices#Duplication_matrix}{Wikipedia: Duplication matrix}
+
+\href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)}{Wikipedia: Vectorization}
 
 Magnus, J. R., & Neudecker, H. (1980).
 The elimination matrix: Some lemmas and applications.
@@ -84,15 +86,19 @@ Wiley.
 }
 \seealso{
 Other Symmetric Functions: 
+\code{\link{.dcap}()},
+\code{\link{.mcap_cor}()},
+\code{\link{.mcap_diag}()},
+\code{\link{.mcap_sym}()},
+\code{\link{.pinv_of_dcap}()},
+\code{\link{.sym_of_vechs}()},
+\code{\link{.sym_of_vech}()},
 \code{\link{dcap}()},
 \code{\link{mcap_cor}()},
 \code{\link{mcap_diag}()},
 \code{\link{mcap_sym}()},
 \code{\link{sym_of_vechs}()},
 \code{\link{sym_of_vech}()}
-}
-\author{
-Ivan Jacob Agaloos Pesigan
 }
 \concept{Symmetric Functions}
 \keyword{linearAlgebra}

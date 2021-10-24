@@ -20,10 +20,10 @@ A vector.
 }
 \description{
 Apply a strict half-vectorization,
-that is, half-vectorize an
+that is,
+eliminate the diagonal and upper diagonal elements of a
 \eqn{k \times k}
-matrix
-without the diagonal elements.
+matrix.
 }
 \details{
 The strict half-vectorization of a
@@ -64,16 +64,25 @@ A <- matrix(
     0.5, 1.0, 0.6,
     0.4, 0.6, 1.0
   ),
-  ncol = 3
+  nrow = 3
 )
 
 vechs(A)
 }
 \references{
-\href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Half-vectorization}{Wikipedia: Half-vectorization}
+\href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)}{Wikipedia: Vectorization}
+
+Magnus, J. R., & Neudecker, H. (2019).
+Matrix  differential  calculus with  applications  in  statistics  and  econometrics.
+Wiley.
+\url{https://doi.org/10.1002/9781119541219}
 }
 \seealso{
 Other Vectorization Functions: 
+\code{\link{.diag_of_vech}()},
+\code{\link{.vechs}()},
+\code{\link{.vech}()},
+\code{\link{.vec}()},
 \code{\link{diag_of_vech}()},
 \code{\link{vechnames}()},
 \code{\link{vechsnames}()},

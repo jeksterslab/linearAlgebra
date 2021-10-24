@@ -9,7 +9,7 @@ x_i <- matrix(
 )
 m_i <- dim(x_i)[1]
 answer_i <- c(1.0, 0.5, 0.4, 1.0, 0.6, 1.0)
-result_i <- c(pinv_of_dcap(dcap(m_i)) %*% as.vector(x_i))
+result_i <- c(pinv_of_dcap(m_i) %*% as.vector(x_i))
 testthat::test_that("test-linearAlgebra-pinv_of_dcap 3 by 3", {
   testthat::expect_equal(
     result_i,
@@ -22,7 +22,7 @@ x_i <- matrix(
 )
 m_i <- dim(x_i)[1]
 answer_i <- c(1, 2, 3)
-result_i <- c(pinv_of_dcap(dcap(m_i)) %*% as.vector(x_i))
+result_i <- c(pinv_of_dcap(m_i) %*% as.vector(x_i))
 testthat::test_that("test-linearAlgebra-pinv_of_dcap 2 by 2", {
   testthat::expect_equal(
     result_i,
@@ -65,8 +65,8 @@ x_i <- matrix(
 )
 x_i <- cov(x_i)
 m_i <- dim(x_i)[1]
-answer_i <- vech(x_i)
-result_i <- c(pinv_of_dcap(dcap(m_i)) %*% as.vector(x_i))
+answer_i <- .vech(x_i)
+result_i <- c(pinv_of_dcap(m_i) %*% as.vector(x_i))
 testthat::test_that("test-linearAlgebra-pinv_of_dcap random cov", {
   testthat::expect_equal(
     result_i,

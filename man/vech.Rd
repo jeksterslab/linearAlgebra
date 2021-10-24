@@ -19,10 +19,14 @@ Separator for variable names.}
 A vector.
 }
 \description{
-Half-vectorize a matrix.
+Apply a half-vectorization,
+that is,
+eliminate the upper diagonal elements of a
+\eqn{k \times k}
+matrix.
 }
 \details{
-The half-vectorization of an
+The half-vectorization of a
 \eqn{k \times k}
 matrix
 \eqn{\mathbf{A}},
@@ -40,8 +44,7 @@ is the
     \times
     1
 }
-vector obtained from
-the vectorization of
+vector obtained from the vectorization of
 \eqn{\mathbf{A}},
 given by
 \eqn{
@@ -58,13 +61,13 @@ A <- matrix(
     0.5, 1.0, 0.6,
     0.4, 0.6, 1.0
   ),
-  ncol = 3
+  nrow = 3
 )
 
 vech(A)
 }
 \references{
-\href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Half-vectorization}{Wikipedia: Half-vectorization}
+\href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)}{Wikipedia: Vectorization}
 
 Magnus, J. R., & Neudecker, H. (2019).
 Matrix  differential  calculus with  applications  in  statistics  and  econometrics.
@@ -73,6 +76,10 @@ Wiley.
 }
 \seealso{
 Other Vectorization Functions: 
+\code{\link{.diag_of_vech}()},
+\code{\link{.vechs}()},
+\code{\link{.vech}()},
+\code{\link{.vec}()},
 \code{\link{diag_of_vech}()},
 \code{\link{vechnames}()},
 \code{\link{vechsnames}()},

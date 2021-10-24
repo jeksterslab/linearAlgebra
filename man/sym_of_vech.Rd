@@ -7,10 +7,11 @@
 sym_of_vech(x)
 }
 \arguments{
-\item{x}{Vector.}
+\item{x}{Vector.
+Half-vectorization of a \code{k} by \code{k} matrix.}
 }
 \value{
-A vector.
+A matrix.
 }
 \description{
 Symmetric matrix from its half-vectorization.
@@ -30,17 +31,29 @@ A <- matrix(
     0.5, 1.0, 0.6,
     0.4, 0.6, 1.0
   ),
-  ncol = 3
+  nrow = 3
 )
 vechA <- c(1.0, 0.5, 0.4, 1.0, 0.6, 1.0)
 
 sym_of_vech(vechA)
 }
 \references{
-\href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Half-vectorization}{Wikipedia: Half-vectorization}
+\href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)}{Wikipedia: Vectorization}
+
+Magnus, J. R., & Neudecker, H. (2019).
+Matrix  differential  calculus with  applications  in  statistics  and  econometrics.
+Wiley.
+\url{https://doi.org/10.1002/9781119541219}
 }
 \seealso{
 Other Symmetric Functions: 
+\code{\link{.dcap}()},
+\code{\link{.mcap_cor}()},
+\code{\link{.mcap_diag}()},
+\code{\link{.mcap_sym}()},
+\code{\link{.pinv_of_dcap}()},
+\code{\link{.sym_of_vechs}()},
+\code{\link{.sym_of_vech}()},
 \code{\link{dcap}()},
 \code{\link{mcap_cor}()},
 \code{\link{mcap_diag}()},

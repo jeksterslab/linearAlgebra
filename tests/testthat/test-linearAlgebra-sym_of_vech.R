@@ -73,8 +73,8 @@ x_i <- matrix(
     ncol = 1
   ) %*% mu_i
 )
-answer_i <- cov(x_i)
-result_i <- sym_of_vech(answer_i[lower.tri(answer_i, diag = TRUE)])
+answer_i <- stats::cov(x_i)
+result_i <- sym_of_vech(.vech(answer_i))
 testthat::test_that("test-linearAlgebra-sym_of_vech random cov", {
   testthat::expect_equal(
     result_i,

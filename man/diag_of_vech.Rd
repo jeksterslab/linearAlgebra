@@ -7,7 +7,8 @@
 diag_of_vech(x, loc = FALSE)
 }
 \arguments{
-\item{x}{Vector.}
+\item{x}{Vector.
+Half-vectorization of a \code{k} by \code{k} matrix.}
 
 \item{loc}{Logical.
 If \code{loc = TRUE}, return the location of the diagonal elements
@@ -47,6 +48,10 @@ diag_of_vech(vechA, loc = TRUE)
 }
 \seealso{
 Other Vectorization Functions: 
+\code{\link{.diag_of_vech}()},
+\code{\link{.vechs}()},
+\code{\link{.vech}()},
+\code{\link{.vec}()},
 \code{\link{vechnames}()},
 \code{\link{vechsnames}()},
 \code{\link{vechs}()},

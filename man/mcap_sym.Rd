@@ -4,11 +4,11 @@
 \alias{mcap_sym}
 \title{The Symmetric Pattern Matrix}
 \usage{
-mcap_sym(x)
+mcap_sym(k)
 }
 \arguments{
-\item{x}{Integer.
-Dimension of the symmetric matrix.}
+\item{k}{Positive integer.
+Dimension of the \code{k} by \code{k} matrix.}
 }
 \value{
 A matrix.
@@ -73,6 +73,13 @@ https://doi.org/10.1016/0024-3795(85)90191-0
 }
 \seealso{
 Other Symmetric Functions: 
+\code{\link{.dcap}()},
+\code{\link{.mcap_cor}()},
+\code{\link{.mcap_diag}()},
+\code{\link{.mcap_sym}()},
+\code{\link{.pinv_of_dcap}()},
+\code{\link{.sym_of_vechs}()},
+\code{\link{.sym_of_vech}()},
 \code{\link{dcap}()},
 \code{\link{mcap_cor}()},
 \code{\link{mcap_diag}()},

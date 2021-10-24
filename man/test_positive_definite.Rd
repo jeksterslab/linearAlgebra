@@ -46,6 +46,10 @@ test_positive_definite(
 \references{
 \href{https://en.wikipedia.org/wiki/Definite_matrix}{Wikipedia: Definite matrix}
 }
+\seealso{
+Other Linear Algebra Functions: 
+\code{\link{.test_positive_definite}()}
+}
 \author{
 Ivan Jacob Agaloos Pesigan
 }

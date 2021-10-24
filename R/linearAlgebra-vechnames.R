@@ -6,10 +6,7 @@
 #' @param sep Character string.
 #'   Separator for variable names.
 #'
-#' @references
-#' [Wikipedia: Half-vectorization](https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Half-vectorization)
-#'
-#' @returns A vector.
+#' @returns A character vector.
 #'
 #' @examples
 #' x <- diag(1)
@@ -23,9 +20,9 @@
 #' x <- diag(3)
 #' colnames(x) <- rownames(x) <- c("x1", "x2", "x3")
 #' vechnames(colnames(x))
-#' @export
 #' @family Vectorization Functions
 #' @keywords linearAlgebra vectorization
+#' @export
 vechnames <- function(x,
                       sep = ".") {
   stopifnot(

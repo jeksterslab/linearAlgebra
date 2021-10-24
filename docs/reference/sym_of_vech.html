@@ -137,13 +137,14 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>Vector.</p></td>
+      <td><p>Vector.
+Half-vectorization of a <code>k</code> by <code>k</code> matrix.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A vector.</p>
+    <p>A matrix.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Generates an
@@ -154,10 +155,21 @@ from a
 vector.</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    <p><a href='https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Half-vectorization'>Wikipedia: Half-vectorization</a></p>
+    <p><a href='https://en.wikipedia.org/wiki/Vectorization_(mathematics)'>Wikipedia: Vectorization</a></p>
+<p>Magnus, J. R., &amp; Neudecker, H. (2019).
+Matrix  differential  calculus with  applications  in  statistics  and  econometrics.
+Wiley.
+<a href='https://doi.org/10.1002/9781119541219'>https://doi.org/10.1002/9781119541219</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other Symmetric Functions: 
+<code><a href='.dcap.html'>.dcap</a>()</code>,
+<code><a href='.mcap_cor.html'>.mcap_cor</a>()</code>,
+<code><a href='.mcap_diag.html'>.mcap_diag</a>()</code>,
+<code><a href='.mcap_sym.html'>.mcap_sym</a>()</code>,
+<code><a href='.pinv_of_dcap.html'>.pinv_of_dcap</a>()</code>,
+<code><a href='.sym_of_vechs.html'>.sym_of_vechs</a>()</code>,
+<code><a href='.sym_of_vech.html'>.sym_of_vech</a>()</code>,
 <code><a href='dcap.html'>dcap</a>()</code>,
 <code><a href='mcap_cor.html'>mcap_cor</a>()</code>,
 <code><a href='mcap_diag.html'>mcap_diag</a>()</code>,
@@ -175,7 +187,7 @@ vector.</p>
     <span class='fl'>0.5</span>, <span class='fl'>1.0</span>, <span class='fl'>0.6</span>,
     <span class='fl'>0.4</span>, <span class='fl'>0.6</span>, <span class='fl'>1.0</span>
   <span class='op'>)</span>,
-  ncol <span class='op'>=</span> <span class='fl'>3</span>
+  nrow <span class='op'>=</span> <span class='fl'>3</span>
 <span class='op'>)</span>
 <span class='va'>vechA</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1.0</span>, <span class='fl'>0.5</span>, <span class='fl'>0.4</span>, <span class='fl'>1.0</span>, <span class='fl'>0.6</span>, <span class='fl'>1.0</span><span class='op'>)</span>
 
