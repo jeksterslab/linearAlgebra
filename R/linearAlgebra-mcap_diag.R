@@ -11,12 +11,6 @@
 #' @keywords linearAlgebra symmetric
 #' @export
 mcap_diag <- function(k) {
-  stopifnot(
-    is.vector(k),
-    length(k) == 1,
-    k > 0
-  )
-  .mcap_diag(
-    as.integer(k)
-  )
+  k_check(k)
+  .mcap_diag(k)
 }

@@ -64,8 +64,10 @@
 .pinv_of_dcap <- function(d) {
   return(
     tcrossprod(
-      solve(
-        crossprod(d)
+      chol2inv(
+        chol(
+          crossprod(d)
+        )
       ),
       d
     )

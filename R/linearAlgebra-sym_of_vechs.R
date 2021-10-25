@@ -14,9 +14,7 @@
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
-#' @param x Vector.
-#' @param diags Vector.
-#'   Diagonal elements.
+#' @inheritParams vechs_check
 #'
 #' @references
 #' [Wikipedia: Half-vectorization](https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Half-vectorization)
@@ -39,16 +37,11 @@
 #' @keywords linearAlgebra symmetric
 #' @export
 sym_of_vechs <- function(x, diags) {
-  stopifnot(
-    is.vector(x),
-    is.vector(diags)
+  k <- vechs_check(
+    x,
+    diags = diags,
+    return_k = TRUE
   )
-  k <- 0.5 * (sqrt(1 + 8 * length(x)) + 1)
-  if (k %% 1 != 0) {
-    stop("Length of \"x\" is not valid.")
-  }
-  diags_k <- length(diags)
-  stopifnot(diags_k == 1 || diags_k == k)
   .sym_of_vechs(
     x = x,
     k = k,

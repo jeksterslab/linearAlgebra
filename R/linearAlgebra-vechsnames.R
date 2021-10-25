@@ -2,8 +2,8 @@
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
-#' @inheritParams vechnames
-#' @inherit vechnames return
+#' @inheritParams .vechsnames
+#' @inherit .vechsnames return
 #'
 #' @examples
 #' x <- diag(2)
@@ -20,18 +20,10 @@ vechsnames <- function(x,
                        sep = ".") {
   stopifnot(
     is.vector(x),
-    length(x) > 1
+    length(sep) == 1
   )
-  ind <- utils::combn(length(x), 2)
-  output <- vector(mode = "list", length = 2)
-  for (i in seq_len(dim(ind)[1])) {
-    output[[i]] <- x[ind[i, ]]
-  }
-  return(
-    paste0(
-      output[[1]],
-      sep,
-      output[[2]]
-    )
+  .vechsnames(
+    x = x,
+    sep = sep
   )
 }

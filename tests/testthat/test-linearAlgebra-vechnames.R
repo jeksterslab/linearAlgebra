@@ -1,19 +1,54 @@
 ## ---- test-linearAlgebra-vechnames
-testthat::test_that("test-linearAlgebra-vechnames 1 by 1", {
-  testthat::expect_equal(
-    "x1.x1",
-    vechnames("x1")
-  )
-})
-testthat::test_that("test-linearAlgebra-vechnames 2 by 2", {
-  testthat::expect_equal(
-    c("x1.x1", "x1.x2", "x2.x2"),
-    vechnames(c("x1", "x2"))
-  )
-})
-testthat::test_that("test-linearAlgebra-vechnames 3 by 3", {
-  testthat::expect_equal(
-    c("x1.x1", "x1.x2", "x1.x3", "x2.x2", "x2.x3", "x3.x3"),
-    vechnames(c("x1", "x2", "x3"))
-  )
-})
+foo <- function(k,
+                message) {
+  varnames <- seq_len(k)
+  testthat::test_that(message, {
+    testthat::expect_equal(
+      .vech(
+        outer(
+          X = varnames,
+          Y = varnames,
+          FUN = function(x, y) {
+            paste0(x, ".", y)
+          }
+        )
+      ),
+      vechnames(varnames)
+    )
+  })
+  testthat::test_that(message, {
+    testthat::expect_equal(
+      .vech(
+        outer(
+          X = varnames,
+          Y = varnames,
+          FUN = function(x, y) {
+            paste0(x, ".", y)
+          }
+        )
+      ),
+      names(
+        vech(
+          toeplitz((k:1) / k),
+          names = TRUE
+        )
+      )
+    )
+  })
+}
+lapply(
+  X = seq_len(10),
+  FUN = function(k) {
+    foo(
+      k = k,
+      message = paste(
+        "test-linearAlgebra-vechnames",
+        k
+      )
+    )
+  }
+)
+# clean environment
+rm(
+  foo
+)

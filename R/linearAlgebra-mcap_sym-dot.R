@@ -60,8 +60,10 @@
 #' @export
 .mcap_sym <- function(d) {
   d %*% tcrossprod(
-    solve(
-      crossprod(d)
+    chol2inv(
+      chol(
+        crossprod(d)
+      )
     ),
     d
   )

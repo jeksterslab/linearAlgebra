@@ -26,18 +26,17 @@
 vech <- function(x,
                  names = FALSE,
                  sep = ".") {
-  stopifnot(
-    is.matrix(x),
-    dim(x)[1] == dim(2)
-  )
   output <- .vech(x)
   if (names) {
     varnames <- colnames(x)
     if (is.null(varnames)) {
       varnames <- paste0(seq_len(dim(x)[2]))
     }
-    varnames <- vechnames(varnames, sep = sep)
+    varnames <- .vechnames(
+      x = varnames,
+      sep = sep
+    )
     names(output) <- varnames
   }
-  return(output)
+  output
 }

@@ -21,11 +21,7 @@
 #' @keywords linearAlgebra symmetric
 #' @export
 sym_of_vech <- function(x) {
-  stopifnot(is.vector(x))
-  k <- 0.5 * (sqrt(1 + 8 * length(x)) - 1)
-  if (k %% 1 != 0) {
-    stop("Length of \"x\" is not valid.")
-  }
+  k <- vech_check(x, return_k = TRUE)
   .sym_of_vech(
     x = x,
     k = k

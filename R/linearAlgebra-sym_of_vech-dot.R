@@ -36,12 +36,12 @@
 #' @export
 .sym_of_vech <- function(x,
                          k) {
-  output <- matrix(
+  sym <- matrix(
     data = 0,
     nrow = k,
     ncol = k
   )
-  output[lower.tri(output, diag = TRUE)] <- x
-  output[upper.tri(output)] <- t(output)[upper.tri(output)]
-  output
+  sym[lower.tri(sym, diag = TRUE)] <- x
+  sym[upper.tri(sym)] <- t(sym)[upper.tri(sym)]
+  sym
 }

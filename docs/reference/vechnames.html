@@ -40,7 +40,8 @@
 
 
 <meta property="og:title" content="Vector Names for Half-Vectorization — vechnames" />
-<meta property="og:description" content="Vector Names for Half-Vectorization" />
+<meta property="og:description" content="Returns a character vector of length 0.5 * k * (k + 1)
+from an input vector x of length k." />
 
 
 
@@ -127,7 +128,8 @@
     </div>
 
     <div class="ref-description">
-    <p>Vector Names for Half-Vectorization</p>
+    <p>Returns a character vector of length <code>0.5 * k * (k + 1)</code>
+from an input vector <code>x</code> of length <code>k</code>.</p>
     </div>
 
     <pre class="usage"><span class='fu'>vechnames</span><span class='op'>(</span><span class='va'>x</span>, sep <span class='op'>=</span> <span class='st'>"."</span><span class='op'>)</span></pre>
@@ -137,7 +139,7 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>Character vector of names.</p></td>
+      <td><p>Character vector of names of length <code>k</code>.</p></td>
     </tr>
     <tr>
       <th>sep</th>
@@ -153,10 +155,14 @@ Separator for variable names.</p></td>
 
     <div class='dont-index'><p>Other Vectorization Functions: 
 <code><a href='.diag_of_vech.html'>.diag_of_vech</a>()</code>,
+<code><a href='.vechnames.html'>.vechnames</a>()</code>,
+<code><a href='.vechsnames.html'>.vechsnames</a>()</code>,
 <code><a href='.vechs.html'>.vechs</a>()</code>,
 <code><a href='.vech.html'>.vech</a>()</code>,
 <code><a href='.vec.html'>.vec</a>()</code>,
 <code><a href='diag_of_vech.html'>diag_of_vech</a>()</code>,
+<code><a href='vech_check.html'>vech_check</a>()</code>,
+<code><a href='vechs_check.html'>vechs_check</a>()</code>,
 <code><a href='vechsnames.html'>vechsnames</a>()</code>,
 <code><a href='vechs.html'>vechs</a>()</code>,
 <code><a href='vech.html'>vech</a>()</code>,
@@ -173,11 +179,11 @@ Separator for variable names.</p></td>
 <span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"x1"</span>, <span class='st'>"x2"</span><span class='op'>)</span>
 <span class='fu'>vechnames</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "x1.x1" "x1.x2" "x2.x2"</div><div class='input'>
+</div><div class='output co'>#&gt; [1] "x1.x1" "x2.x1" "x2.x2"</div><div class='input'>
 <span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='fl'>3</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"x1"</span>, <span class='st'>"x2"</span>, <span class='st'>"x3"</span><span class='op'>)</span>
 <span class='fu'>vechnames</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "x1.x1" "x1.x2" "x1.x3" "x2.x2" "x2.x3" "x3.x3"</div></pre>
+</div><div class='output co'>#&gt; [1] "x1.x1" "x2.x1" "x3.x1" "x2.x2" "x3.x2" "x3.x3"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

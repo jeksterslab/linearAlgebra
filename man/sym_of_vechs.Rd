@@ -7,7 +7,9 @@
 sym_of_vechs(x, diags)
 }
 \arguments{
-\item{x}{Vector.}
+\item{x}{Vector of length \code{0.5 * k(k + 1) - k}.
+Strict half-vectorization of a \code{k} by \code{k} matrix.
+\eqn{\mathrm{vechs} \left( \mathbf{A}_{k \times k} \right)}.}
 
 \item{diags}{Vector.
 Diagonal elements.}
@@ -55,6 +57,7 @@ Other Symmetric Functions:
 \code{\link{.sym_of_vechs}()},
 \code{\link{.sym_of_vech}()},
 \code{\link{dcap}()},
+\code{\link{k_check}()},
 \code{\link{mcap_cor}()},
 \code{\link{mcap_diag}()},
 \code{\link{mcap_sym}()},

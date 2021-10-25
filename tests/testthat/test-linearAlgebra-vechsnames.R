@@ -1,18 +1,54 @@
 ## ---- test-linearAlgebra-vechsnames
-testthat::test_that("test-linearAlgebra-vechsnames 1d", {
-  testthat::expect_error(
-    vechsnames("x1")
-  )
-})
-testthat::test_that("test-linearAlgebra-vechsnames 2d", {
-  testthat::expect_equal(
-    "x1.x2",
-    vechsnames(c("x1", "x2"))
-  )
-})
-testthat::test_that("test-linearAlgebra-vechsnames 3d", {
-  testthat::expect_equal(
-    c("x1.x2", "x1.x3", "x2.x3"),
-    vechsnames(c("x1", "x2", "x3"))
-  )
-})
+foo <- function(k,
+                message) {
+  varnames <- seq_len(k)
+  testthat::test_that(message, {
+    testthat::expect_equal(
+      .vechs(
+        outer(
+          X = varnames,
+          Y = varnames,
+          FUN = function(x, y) {
+            paste0(x, ".", y)
+          }
+        )
+      ),
+      vechsnames(varnames)
+    )
+  })
+  testthat::test_that(message, {
+    testthat::expect_equal(
+      .vechs(
+        outer(
+          X = varnames,
+          Y = varnames,
+          FUN = function(x, y) {
+            paste0(x, ".", y)
+          }
+        )
+      ),
+      names(
+        vechs(
+          toeplitz((k:1) / k),
+          names = TRUE
+        )
+      )
+    )
+  })
+}
+lapply(
+  X = seq_len(10),
+  FUN = function(k) {
+    foo(
+      k = k,
+      message = paste(
+        "test-linearAlgebra-vechsnames",
+        k
+      )
+    )
+  }
+)
+# clean environment
+rm(
+  foo
+)

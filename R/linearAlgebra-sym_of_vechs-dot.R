@@ -42,13 +42,13 @@
 .sym_of_vechs <- function(x,
                           k,
                           diags) {
-  output <- matrix(
+  sym <- matrix(
     data = 0,
     nrow = k,
     ncol = k
   )
-  output[lower.tri(output, diag = FALSE)] <- x
-  output[upper.tri(output)] <- t(output)[upper.tri(output)]
-  diag(output) <- diags
-  return(output)
+  sym[lower.tri(sym, diag = FALSE)] <- x
+  sym[upper.tri(sym)] <- t(sym)[upper.tri(sym)]
+  diag(sym) <- diags
+  sym
 }

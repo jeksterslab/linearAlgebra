@@ -11,12 +11,6 @@
 #' @keywords linearAlgebra symmetric
 #' @export
 dcap <- function(k) {
-  stopifnot(
-    is.vector(k),
-    length(k) == 1,
-    k > 0
-  )
-  .dcap(
-    as.integer(k)
-  )
+  k_check(k)
+  .dcap(k)
 }

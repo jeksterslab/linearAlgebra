@@ -9,14 +9,8 @@
 #' @keywords linearAlgebra symmetric
 #' @export
 pinv_of_dcap <- function(k) {
-  stopifnot(
-    is.vector(k),
-    length(k) == 1,
-    k > 0
-  )
+  k_check(k)
   .pinv_of_dcap(
-    .dcap(
-      as.integer(k)
-    )
+    .dcap(k)
   )
 }

@@ -27,7 +27,7 @@ A collection of functions related to linear algebra.
 
 \section*{Installation}
 
-You can install the released version of `linearAlgebra` from
+You can install the released version of \texttt{linearAlgebra} from
 \href{https://github.com/jeksterslab/linearAlgebra}{GitHub}
 with:
 

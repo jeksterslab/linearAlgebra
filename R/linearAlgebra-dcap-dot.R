@@ -38,8 +38,7 @@
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
-#' @param k Positive integer.
-#'   Dimension of the `k` by `k` matrix.
+#' @inheritParams k_check
 #'
 #' @references
 #'   [Wikipedia: Duplication matrix](https://en.wikipedia.org/wiki/Duplication_and_elimination_matrices#Duplication_matrix)
@@ -71,14 +70,14 @@
     nrow = k,
     ncol = k
   )
-  i <- seq_len(
+  q <- seq_len(
     0.5 * k * (k + 1)
   )
-  sym[lower.tri(sym, diag = TRUE)] <- i
+  sym[lower.tri(sym, diag = TRUE)] <- q
   sym[upper.tri(sym)] <- t(sym)[upper.tri(sym)]
   outer(
     X = c(sym),
-    Y = i,
+    Y = q,
     FUN = function(x, y) {
       ifelse(
         test = x == y,

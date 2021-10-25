@@ -7,7 +7,7 @@
 vechnames(x, sep = ".")
 }
 \arguments{
-\item{x}{Character vector of names.}
+\item{x}{Character vector of names of length \code{k}.}
 
 \item{sep}{Character string.
 Separator for variable names.}
@@ -16,7 +16,8 @@ Separator for variable names.}
 A character vector.
 }
 \description{
-Vector Names for Half-Vectorization
+Returns a character vector of length \code{0.5 * k * (k + 1)}
+from an input vector \code{x} of length \code{k}.
 }
 \examples{
 x <- diag(1)
@@ -34,10 +35,14 @@ vechnames(colnames(x))
 \seealso{
 Other Vectorization Functions: 
 \code{\link{.diag_of_vech}()},
+\code{\link{.vechnames}()},
+\code{\link{.vechsnames}()},
 \code{\link{.vechs}()},
 \code{\link{.vech}()},
 \code{\link{.vec}()},
 \code{\link{diag_of_vech}()},
+\code{\link{vech_check}()},
+\code{\link{vechs_check}()},
 \code{\link{vechsnames}()},
 \code{\link{vechs}()},
 \code{\link{vech}()},

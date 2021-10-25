@@ -93,6 +93,7 @@ Other Symmetric Functions:
 \code{\link{.sym_of_vechs}()},
 \code{\link{.sym_of_vech}()},
 \code{\link{dcap}()},
+\code{\link{k_check}()},
 \code{\link{mcap_cor}()},
 \code{\link{mcap_diag}()},
 \code{\link{mcap_sym}()},

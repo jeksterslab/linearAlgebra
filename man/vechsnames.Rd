@@ -7,7 +7,7 @@
 vechsnames(x, sep = ".")
 }
 \arguments{
-\item{x}{Character vector of names.}
+\item{x}{Character vector of names of length \code{k}.}
 
 \item{sep}{Character string.
 Separator for variable names.}
@@ -30,11 +30,15 @@ vechsnames(colnames(x))
 \seealso{
 Other Vectorization Functions: 
 \code{\link{.diag_of_vech}()},
+\code{\link{.vechnames}()},
+\code{\link{.vechsnames}()},
 \code{\link{.vechs}()},
 \code{\link{.vech}()},
 \code{\link{.vec}()},
 \code{\link{diag_of_vech}()},
+\code{\link{vech_check}()},
 \code{\link{vechnames}()},
+\code{\link{vechs_check}()},
 \code{\link{vechs}()},
 \code{\link{vech}()},
 \code{\link{vec}()}

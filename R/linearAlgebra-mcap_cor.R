@@ -12,16 +12,10 @@
 #' @keywords linearAlgebra symmetric
 #' @export
 mcap_cor <- function(k) {
-  stopifnot(
-    is.vector(k),
-    length(k) == 1,
-    k > 0
-  )
+  k_check(k)
   .mcap_cor(
     ms = .mcap_sym(
-      .dcap(
-        as.integer(k)
-      )
+      .dcap(k)
     )
   )
 }

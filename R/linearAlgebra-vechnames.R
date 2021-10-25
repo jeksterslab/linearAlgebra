@@ -2,11 +2,8 @@
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
-#' @param x Character vector of names.
-#' @param sep Character string.
-#'   Separator for variable names.
-#'
-#' @returns A character vector.
+#' @inheritParams .vechnames
+#' @inherit .vechnames description return
 #'
 #' @examples
 #' x <- diag(1)
@@ -29,17 +26,8 @@ vechnames <- function(x,
     is.vector(x),
     length(sep) == 1
   )
-  ind <- utils::combn(length(x) + 1, 2)
-  ind[2, ] <- ind[2, ] - 1
-  output <- vector(mode = "list", length = 2)
-  for (i in seq_len(dim(ind)[1])) {
-    output[[i]] <- x[ind[i, ]]
-  }
-  return(
-    paste0(
-      output[[1]],
-      sep,
-      output[[2]]
-    )
+  .vechnames(
+    x = x,
+    sep = sep
   )
 }

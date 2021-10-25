@@ -23,18 +23,8 @@
 #' @export
 diag_of_vech <- function(x,
                          loc = FALSE) {
-  stopifnot(
-    is.vector(x),
-    is.logical(loc)
-  )
-  k <- 0.5 * (
-    sqrt(
-      1 + 8 * length(x)
-    ) - 1
-  )
-  if (k %% 1 != 0) {
-    stop("Length of \"x\" is not valid.")
-  }
+  k <- vech_check(x, return_k = TRUE)
+  stopifnot(is.logical(loc))
   .diag_of_vech(
     x,
     k = k,
