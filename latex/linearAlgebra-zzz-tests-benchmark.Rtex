@@ -1,0 +1,101 @@
+\documentclass{article}
+
+\input{latex/preamble/preamble}
+
+\title{linearAlgebra: Benchmarks}
+\author{Ivan Jacob Agaloos Pesigan}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+<<echo=FALSE>>=
+root <- rprojroot::is_rstudio_project
+source(
+  root$find_file(
+    "latex",
+    "R_scripts",
+    "start.R"
+  )
+)
+@
+
+\section{.pinv\_of\_dcap}
+
+<<echo=FALSE, cache=FALSE>>=
+knitr::read_chunk(
+  root$find_file(
+    "tests_benchmark",
+    "test-benchmark-linearAlgebra-pinv-of-dcap-dot.R"
+  )
+)
+@
+
+<<test-benchmark-linearAlgebra-pinv-of-dcap-dot>>=
+@
+
+\newpage
+
+\section{.vec}
+
+<<echo=FALSE, cache=FALSE>>=
+knitr::read_chunk(
+  root$find_file(
+    "tests_benchmark",
+    "test-benchmark-linearAlgebra-vec-dot.R"
+  )
+)
+@
+
+<<test-benchmark-linearAlgebra-vec-dot>>=
+@
+
+\newpage
+
+\section{.vec\_mean}
+
+<<echo=FALSE, cache=FALSE>>=
+knitr::read_chunk(
+  root$find_file(
+    "tests_benchmark",
+    "test-benchmark-linearAlgebra-vec-mean-dot.R"
+  )
+)
+@
+
+<<test-benchmark-linearAlgebra-vec-mean-dot>>=
+@
+
+\newpage 
+
+\section*{Environment}
+
+<<>>=
+ls()
+@
+
+\section*{Class}
+
+<<>>=
+obj_i <- lapply(
+  X = ls(),
+  FUN = function(x) eval(parse(text = x))
+)
+unique(
+  lapply(
+    X = obj_i,
+    FUN = class
+  )
+)
+@
+
+\newpage
+
+\section*{Session - Overleaf}
+
+<<>>=
+sessionInfo()
+@
+
+\end{document}

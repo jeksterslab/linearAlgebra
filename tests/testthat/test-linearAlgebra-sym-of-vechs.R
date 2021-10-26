@@ -18,7 +18,7 @@ bar <- function(k,
     })
   }
 }
-testthat::test_that("test-linearAlgebra-sym_of_vechs matrix", {
+testthat::test_that("test-linearAlgebra-sym-of-vechs matrix", {
   testthat::expect_error(
     sym_of_vechs(matrix(0, 3), diags = 1)
   )

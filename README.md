@@ -1,7 +1,7 @@
 linearAlgebra
 ================
 Ivan Jacob Agaloos Pesigan
-2021-10-25
+2021-10-26
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->

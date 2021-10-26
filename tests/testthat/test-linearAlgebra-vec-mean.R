@@ -1,13 +1,14 @@
-## ---- test-linearAlgebra-pinv_of_dcap
+## ---- test-linearAlgebra-vec-mean
 foo <- function(x,
                 message) {
-  vechx <- .vech(x)
   testthat::test_that(message, {
     testthat::expect_equal(
-      c(
-        pinv_of_dcap(dim(x)[1]) %*% as.vector(x)
-      ),
-      vechx
+      vec_mean(x),
+      mean(x)
+    )
+    testthat::expect_equal(
+      vec_mean(.vec(x)),
+      mean(x)
     )
   })
 }
@@ -16,7 +17,10 @@ lapply(
   FUN = function(k) {
     foo(
       x = toeplitz((k:1) / k),
-      message = paste("test-linearAlgebra-pinv_of_dcap", k)
+      message = paste(
+        "test-linearAlgebra-vec-mean",
+        k
+      )
     )
   }
 )

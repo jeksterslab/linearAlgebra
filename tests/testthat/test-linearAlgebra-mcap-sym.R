@@ -1,5 +1,5 @@
 ## ---- test-linearAlgebra-mcap_sym
-testthat::test_that("test-linearAlgebra-mcap_sym 2 by 2", {
+testthat::test_that("test-linearAlgebra-mcap-sym 2 by 2", {
   testthat::expect_equal(
     mcap_sym(2),
     matrix(
@@ -13,7 +13,7 @@ testthat::test_that("test-linearAlgebra-mcap_sym 2 by 2", {
     )
   )
 })
-testthat::test_that("test-linearAlgebra-mcap_sym 3 by 3", {
+testthat::test_that("test-linearAlgebra-mcap-sym 3 by 3", {
   testthat::expect_equal(
     mcap_sym(3),
     matrix(
@@ -32,7 +32,7 @@ testthat::test_that("test-linearAlgebra-mcap_sym 3 by 3", {
     )
   )
 })
-testthat::test_that("test-linearAlgebra-mcap_sym 4 by 4", {
+testthat::test_that("test-linearAlgebra-mcap-sym 4 by 4", {
   testthat::expect_equal(
     mcap_sym(4),
     matrix(

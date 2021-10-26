@@ -1,4 +1,4 @@
-## ---- test-linearAlgebra-sym_of_vech
+## ---- test-linearAlgebra-sym-of-vech
 foo <- function(x,
                 message) {
   testthat::test_that(message, {
@@ -18,7 +18,7 @@ bar <- function(k,
     })
   }
 }
-testthat::test_that("test-linearAlgebra-sym_of_vech matrix", {
+testthat::test_that("test-linearAlgebra-sym-of-vech matrix", {
   testthat::expect_error(
     sym_of_vech(matrix(0, 3))
   )
@@ -26,7 +26,7 @@ testthat::test_that("test-linearAlgebra-sym_of_vech matrix", {
 lapply(
   X = seq_len(10),
   FUN = function(k) {
-    message <- paste("test-linearAlgebra-sym_of_vech", k)
+    message <- paste("test-linearAlgebra-sym-of-vech", k)
     foo(
       x = toeplitz((k:1) / k),
       message = message

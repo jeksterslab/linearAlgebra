@@ -1,5 +1,5 @@
-## ---- test-linearAlgebra-mcap_cor
-testthat::test_that("test-linearAlgebra-mcap_cor 2 by 2", {
+## ---- test-linearAlgebra-mcap-cor
+testthat::test_that("test-linearAlgebra-mcap-cor 2 by 2", {
   testthat::expect_equal(
     mcap_cor(2),
     matrix(
@@ -13,7 +13,7 @@ testthat::test_that("test-linearAlgebra-mcap_cor 2 by 2", {
     )
   )
 })
-testthat::test_that("test-linearAlgebra-mcap_cor 3 by 3", {
+testthat::test_that("test-linearAlgebra-mcap-cor 3 by 3", {
   testthat::expect_equal(
     mcap_cor(3),
     matrix(
@@ -32,7 +32,7 @@ testthat::test_that("test-linearAlgebra-mcap_cor 3 by 3", {
     )
   )
 })
-testthat::test_that("test-linearAlgebra-mcap_cor 4 by 4", {
+testthat::test_that("test-linearAlgebra-mcap-cor 4 by 4", {
   testthat::expect_equal(
     mcap_cor(4),
     matrix(

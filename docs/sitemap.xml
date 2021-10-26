@@ -40,6 +40,9 @@
     <loc>https://github.com/jeksterslab/linearAlgebra//reference/dot-vec.html</loc>
   </url>
   <url>
+    <loc>https://github.com/jeksterslab/linearAlgebra//reference/dot-vec_mean.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/jeksterslab/linearAlgebra//reference/dot-vech.html</loc>
   </url>
   <url>
@@ -80,6 +83,9 @@
   </url>
   <url>
     <loc>https://github.com/jeksterslab/linearAlgebra//reference/vec.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/linearAlgebra//reference/vec_mean.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab/linearAlgebra//reference/vech.html</loc>

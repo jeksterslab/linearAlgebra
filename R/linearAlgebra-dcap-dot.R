@@ -76,7 +76,7 @@
   sym[lower.tri(sym, diag = TRUE)] <- q
   sym[upper.tri(sym)] <- t(sym)[upper.tri(sym)]
   outer(
-    X = c(sym),
+    X = .vec(sym),
     Y = q,
     FUN = function(x, y) {
       ifelse(

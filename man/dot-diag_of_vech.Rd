@@ -52,12 +52,14 @@ vechA <- c(1.0, 0.5, 0.4, 1.0, 0.6, 1.0)
 }
 \seealso{
 Other Vectorization Functions: 
+\code{\link{.vec_mean}()},
 \code{\link{.vechnames}()},
 \code{\link{.vechsnames}()},
 \code{\link{.vechs}()},
 \code{\link{.vech}()},
 \code{\link{.vec}()},
 \code{\link{diag_of_vech}()},
+\code{\link{vec_mean}()},
 \code{\link{vech_check}()},
 \code{\link{vechnames}()},
 \code{\link{vechs_check}()},

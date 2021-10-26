@@ -51,20 +51,12 @@
       return(x[1])
     }
   }
-  i <- sapply(
-    X = seq_len(k),
-    FUN = function(i, k) {
-      k * (i - 1) + 1 - (
-        (
-          (i - 2) * (i - 1)
-        ) / 2
-      )
-    },
-    k = k
+  j <- 0.5 * (
+    2 * k * 1:k - 2 * k + 3 * 1:k - (1:k) * (1:k)
   )
   if (loc) {
-    return(i)
+    return(j)
   } else {
-    return(x[i])
+    return(x[j])
   }
 }

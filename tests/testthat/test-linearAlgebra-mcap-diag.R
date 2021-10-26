@@ -1,4 +1,4 @@
-## ---- test-linearAlgebra-mcap_diag
+## ---- test-linearAlgebra-mcap-diag
 testthat::test_that("test-linearAlgebra-mcap_diag 2 by 2", {
   testthat::expect_equal(
     mcap_diag(2),
@@ -13,7 +13,7 @@ testthat::test_that("test-linearAlgebra-mcap_diag 2 by 2", {
     )
   )
 })
-testthat::test_that("test-linearAlgebra-mcap_diag 3 by 3", {
+testthat::test_that("test-linearAlgebra-mcap-diag 3 by 3", {
   testthat::expect_equal(
     mcap_diag(3),
     matrix(
@@ -32,7 +32,7 @@ testthat::test_that("test-linearAlgebra-mcap_diag 3 by 3", {
     )
   )
 })
-testthat::test_that("test-linearAlgebra-mcap_diag 4 by 4", {
+testthat::test_that("test-linearAlgebra-mcap-diag 4 by 4", {
   testthat::expect_equal(
     mcap_diag(4),
     matrix(
