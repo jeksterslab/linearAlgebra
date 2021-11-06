@@ -1,9 +1,25 @@
 #' Diagonals of A from vech(A)
 #'
+#' Diagonals of a matrix from its half-vectorization.
+#'
+#' Generates a vector of length
+#' \eqn{k}
+#' of diagonal elements or location in the input vector
+#' of an
+#' \eqn{k \times k}
+#' matrix.
+#'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
-#' @inheritParams .diag_of_vech
-#' @inherit .diag_of_vech description details references return
+#' @param x Vector.
+#'   Half-vectorization of a `k` by `k` matrix.
+#' @param loc Logical.
+#'   If `loc = TRUE`, return the location of the diagonal elements
+#'   in the input vector.
+#'   If `loc = FALSE`, return the values of the diagonal elements.
+#'
+#' @references
+#'   [Wikipedia: Half-vectorization](https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Half-vectorization)
 #'
 #' @examples
 #' A <- matrix(
@@ -23,7 +39,7 @@
 #' @export
 diag_of_vech <- function(x,
                          loc = FALSE) {
-  k <- vech_check(x, return_k = TRUE)
+  k <- .check_vech(x, return_k = TRUE)
   stopifnot(is.logical(loc))
   .diag_of_vech(
     x,

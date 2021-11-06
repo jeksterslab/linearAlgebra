@@ -1,10 +1,34 @@
 #' Vectorize
 #'
+#' Vectorize a matrix.
+#'
+#' The vectorization of an
+#' \eqn{m \times n}
+#' matrix
+#' \eqn{\mathbf{A}},
+#' given by
+#' \eqn{
+#'     \mathrm{vec} \left( \mathbf{A} \right)
+#' },
+#' is the
+#' \eqn{mn \times 1}
+#' vector obtained by stacking the elements of
+#' \eqn{\mathbf{A}}
+#' column-wise.
+#'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
-#' @inheritParams .vec
+#' @param x Matrix.
 #'
-#' @inherit .vec description details references return
+#' @references
+#'   [Wikipedia: Vectorization](https://en.wikipedia.org/wiki/Vectorization_(mathematics))
+#'
+#'   Magnus, J. R., & Neudecker, H. (2019).
+#'   Matrix  differential  calculus with  applications  in  statistics  and  econometrics.
+#'   Wiley.
+#'   [https://doi.org/10.1002/9781119541219](https://doi.org/10.1002/9781119541219)
+#'
+#' @returns A vector.
 #'
 #' @examples
 #' A <- matrix(

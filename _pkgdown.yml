@@ -20,9 +20,3 @@ reference:
 - title: Test
   contents:
   - has_keyword("test")
-- title: Dot Functions
-  contents:
-  - has_keyword("dot")
-- title: Sanity Checks
-  contents:
-  - has_keyword("check")

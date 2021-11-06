@@ -143,10 +143,13 @@ before calculating the mean.</p>
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>Numeric vector or matrix.</p></td>
+      <td><p>Numeric vector or <code>n</code> by <code>1</code> matrix.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A vector of length 1.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The vector mean is given by</p>
@@ -160,17 +163,8 @@ $$</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other Vectorization Functions: 
-<code><a href='.diag_of_vech.html'>.diag_of_vech</a>()</code>,
-<code><a href='.vec_mean.html'>.vec_mean</a>()</code>,
-<code><a href='.vechnames.html'>.vechnames</a>()</code>,
-<code><a href='.vechsnames.html'>.vechsnames</a>()</code>,
-<code><a href='.vechs.html'>.vechs</a>()</code>,
-<code><a href='.vech.html'>.vech</a>()</code>,
-<code><a href='.vec.html'>.vec</a>()</code>,
 <code><a href='diag_of_vech.html'>diag_of_vech</a>()</code>,
-<code><a href='vech_check.html'>vech_check</a>()</code>,
 <code><a href='vechnames.html'>vechnames</a>()</code>,
-<code><a href='vechs_check.html'>vechs_check</a>()</code>,
 <code><a href='vechsnames.html'>vechsnames</a>()</code>,
 <code><a href='vechs.html'>vechs</a>()</code>,
 <code><a href='vech.html'>vech</a>()</code>,
@@ -179,6 +173,13 @@ $$</p>
 
     <p>Ivan Jacob Agaloos Pesigan</p>
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><span class='r-in'><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>100</span><span class='op'>)</span></span>
+<span class='r-in'><span class='fu'>vec_mean</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 0.1062371</span>
+<span class='r-in'><span class='fu'>vec_mean</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='va'>x</span>, ncol <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 0.1062371</span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -14,37 +14,28 @@
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
-#' @inheritParams vechs_check
+#' @param x Vector of length `0.5 * k(k + 1) - k`.
+#'   Strict half-vectorization of a `k` by `k` matrix.
+#'   \eqn{\mathrm{vechs} \left( \mathbf{A}_{k \times k} \right)}.
+#' @param diags Vector.
+#'   Diagonal elements.
 #'
-#' @references
-#' [Wikipedia: Half-vectorization](https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Half-vectorization)
+#' @inherit vec references
 #'
-#' @returns A vector.
+#' @returns A matrix.
 #'
-#' @examples
-#' A <- matrix(
-#'   data = c(
-#'     1.0, 0.5, 0.4,
-#'     0.5, 1.0, 0.6,
-#'     0.4, 0.6, 1.0
-#'   ),
-#'   ncol = 3
-#' )
-#' vechsA <- c(0.5, 0.4, 0.6)
-#'
-#' sym_of_vechs(vechsA, diags = 1)
 #' @family Symmetric Functions
 #' @keywords linearAlgebra symmetric
 #' @export
-sym_of_vechs <- function(x, diags) {
-  k <- vechs_check(
-    x,
-    diags = diags,
-    return_k = TRUE
-  )
+sym_of_vechs <- function(x,
+                         diags) {
   .sym_of_vechs(
     x = x,
-    k = k,
+    k = .check_vechs(
+      x,
+      diags = diags,
+      return_k = TRUE
+    ),
     diags = diags
   )
 }

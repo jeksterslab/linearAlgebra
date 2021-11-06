@@ -15,9 +15,6 @@ If \code{loc = TRUE}, return the location of the diagonal elements
 in the input vector.
 If \code{loc = FALSE}, return the values of the diagonal elements.}
 }
-\value{
-A vector.
-}
 \description{
 Diagonals of a matrix from its half-vectorization.
 }
@@ -48,17 +45,8 @@ diag_of_vech(vechA, loc = TRUE)
 }
 \seealso{
 Other Vectorization Functions: 
-\code{\link{.diag_of_vech}()},
-\code{\link{.vec_mean}()},
-\code{\link{.vechnames}()},
-\code{\link{.vechsnames}()},
-\code{\link{.vechs}()},
-\code{\link{.vech}()},
-\code{\link{.vec}()},
 \code{\link{vec_mean}()},
-\code{\link{vech_check}()},
 \code{\link{vechnames}()},
-\code{\link{vechs_check}()},
 \code{\link{vechsnames}()},
 \code{\link{vechs}()},
 \code{\link{vech}()},

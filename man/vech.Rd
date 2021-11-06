@@ -15,9 +15,6 @@ Add names.}
 \item{sep}{Character string.
 Separator for variable names.}
 }
-\value{
-A vector.
-}
 \description{
 Apply a half-vectorization,
 that is,
@@ -66,28 +63,11 @@ A <- matrix(
 
 vech(A)
 }
-\references{
-\href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)}{Wikipedia: Vectorization}
-
-Magnus, J. R., & Neudecker, H. (2019).
-Matrix  differential  calculus with  applications  in  statistics  and  econometrics.
-Wiley.
-\url{https://doi.org/10.1002/9781119541219}
-}
 \seealso{
 Other Vectorization Functions: 
-\code{\link{.diag_of_vech}()},
-\code{\link{.vec_mean}()},
-\code{\link{.vechnames}()},
-\code{\link{.vechsnames}()},
-\code{\link{.vechs}()},
-\code{\link{.vech}()},
-\code{\link{.vec}()},
 \code{\link{diag_of_vech}()},
 \code{\link{vec_mean}()},
-\code{\link{vech_check}()},
 \code{\link{vechnames}()},
-\code{\link{vechs_check}()},
 \code{\link{vechsnames}()},
 \code{\link{vechs}()},
 \code{\link{vec}()}

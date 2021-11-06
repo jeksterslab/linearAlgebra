@@ -7,8 +7,9 @@
 sym_of_vech(x)
 }
 \arguments{
-\item{x}{Vector.
-Half-vectorization of a \code{k} by \code{k} matrix.}
+\item{x}{Vector of length \code{0.5 * k(k + 1)}.
+Half-vectorization of a \code{k} by \code{k} matrix.
+\eqn{\mathrm{vech} \left( \mathbf{A}_{k \times k} \right)}.}
 }
 \value{
 A matrix.
@@ -31,7 +32,7 @@ A <- matrix(
     0.5, 1.0, 0.6,
     0.4, 0.6, 1.0
   ),
-  nrow = 3
+  ncol = 3
 )
 vechA <- c(1.0, 0.5, 0.4, 1.0, 0.6, 1.0)
 
@@ -47,15 +48,7 @@ Wiley.
 }
 \seealso{
 Other Symmetric Functions: 
-\code{\link{.dcap}()},
-\code{\link{.mcap_cor}()},
-\code{\link{.mcap_diag}()},
-\code{\link{.mcap_sym}()},
-\code{\link{.pinv_of_dcap}()},
-\code{\link{.sym_of_vechs}()},
-\code{\link{.sym_of_vech}()},
 \code{\link{dcap}()},
-\code{\link{k_check}()},
 \code{\link{mcap_cor}()},
 \code{\link{mcap_diag}()},
 \code{\link{mcap_sym}()},

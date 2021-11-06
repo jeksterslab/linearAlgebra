@@ -7,7 +7,10 @@
 vec_mean(x)
 }
 \arguments{
-\item{x}{Numeric vector or matrix.}
+\item{x}{Numeric vector or \code{n} by \code{1} matrix.}
+}
+\value{
+A vector of length 1.
 }
 \description{
 Calculates the mean of a vector.
@@ -26,19 +29,15 @@ The vector mean is given by
   \right)
 }
 }
+\examples{
+x <- rnorm(100)
+vec_mean(x)
+vec_mean(matrix(x, ncol = 1))
+}
 \seealso{
 Other Vectorization Functions: 
-\code{\link{.diag_of_vech}()},
-\code{\link{.vec_mean}()},
-\code{\link{.vechnames}()},
-\code{\link{.vechsnames}()},
-\code{\link{.vechs}()},
-\code{\link{.vech}()},
-\code{\link{.vec}()},
 \code{\link{diag_of_vech}()},
-\code{\link{vech_check}()},
 \code{\link{vechnames}()},
-\code{\link{vechs_check}()},
 \code{\link{vechsnames}()},
 \code{\link{vechs}()},
 \code{\link{vech}()},

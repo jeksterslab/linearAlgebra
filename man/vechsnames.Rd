@@ -16,7 +16,8 @@ Separator for variable names.}
 A character vector.
 }
 \description{
-Vector Names for Strict Half-Vectorization
+Returns a character vector of length \code{0.5 * k * (k + 1) - k}
+from an input vector \code{x} of length \code{k}.
 }
 \examples{
 x <- diag(2)
@@ -29,18 +30,9 @@ vechsnames(colnames(x))
 }
 \seealso{
 Other Vectorization Functions: 
-\code{\link{.diag_of_vech}()},
-\code{\link{.vec_mean}()},
-\code{\link{.vechnames}()},
-\code{\link{.vechsnames}()},
-\code{\link{.vechs}()},
-\code{\link{.vech}()},
-\code{\link{.vec}()},
 \code{\link{diag_of_vech}()},
 \code{\link{vec_mean}()},
-\code{\link{vech_check}()},
 \code{\link{vechnames}()},
-\code{\link{vechs_check}()},
 \code{\link{vechs}()},
 \code{\link{vech}()},
 \code{\link{vec}()}

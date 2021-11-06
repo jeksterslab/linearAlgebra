@@ -1,9 +1,12 @@
 #' Vector Names for Strict Half-Vectorization
 #'
+#' Returns a character vector of length `0.5 * k * (k + 1) - k`
+#' from an input vector `x` of length `k`.
+#'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
-#' @inheritParams .vechsnames
-#' @inherit .vechsnames return
+#' @inherit vechnames return
+#' @inheritParams vechnames
 #'
 #' @examples
 #' x <- diag(2)

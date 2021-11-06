@@ -149,9 +149,6 @@ If <code>loc = FALSE</code>, return the values of the diagonal elements.</p></td
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>A vector.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Generates a vector of length
@@ -166,17 +163,8 @@ matrix.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other Vectorization Functions: 
-<code><a href='.diag_of_vech.html'>.diag_of_vech</a>()</code>,
-<code><a href='.vec_mean.html'>.vec_mean</a>()</code>,
-<code><a href='.vechnames.html'>.vechnames</a>()</code>,
-<code><a href='.vechsnames.html'>.vechsnames</a>()</code>,
-<code><a href='.vechs.html'>.vechs</a>()</code>,
-<code><a href='.vech.html'>.vech</a>()</code>,
-<code><a href='.vec.html'>.vec</a>()</code>,
 <code><a href='vec_mean.html'>vec_mean</a>()</code>,
-<code><a href='vech_check.html'>vech_check</a>()</code>,
 <code><a href='vechnames.html'>vechnames</a>()</code>,
-<code><a href='vechs_check.html'>vechs_check</a>()</code>,
 <code><a href='vechsnames.html'>vechsnames</a>()</code>,
 <code><a href='vechs.html'>vechs</a>()</code>,
 <code><a href='vech.html'>vech</a>()</code>,
@@ -186,19 +174,21 @@ matrix.</p>
     <p>Ivan Jacob Agaloos Pesigan</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='va'>A</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span>
-  data <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span>
-    <span class='fl'>1.0</span>, <span class='fl'>0.5</span>, <span class='fl'>0.4</span>,
-    <span class='fl'>0.5</span>, <span class='fl'>1.0</span>, <span class='fl'>0.6</span>,
-    <span class='fl'>0.4</span>, <span class='fl'>0.6</span>, <span class='fl'>1.0</span>
-  <span class='op'>)</span>,
-  ncol <span class='op'>=</span> <span class='fl'>3</span>
-<span class='op'>)</span>
-<span class='va'>vechA</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1.0</span>, <span class='fl'>0.5</span>, <span class='fl'>0.4</span>, <span class='fl'>1.0</span>, <span class='fl'>0.6</span>, <span class='fl'>1.0</span><span class='op'>)</span>
-
-<span class='fu'>diag_of_vech</span><span class='op'>(</span><span class='va'>vechA</span>, loc <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] 1 1 1</div><div class='input'><span class='fu'>diag_of_vech</span><span class='op'>(</span><span class='va'>vechA</span>, loc <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] 1 4 6</div></pre>
+    <pre class="examples"><span class='r-in'><span class='va'>A</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span></span>
+<span class='r-in'>  data <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span></span>
+<span class='r-in'>    <span class='fl'>1.0</span>, <span class='fl'>0.5</span>, <span class='fl'>0.4</span>,</span>
+<span class='r-in'>    <span class='fl'>0.5</span>, <span class='fl'>1.0</span>, <span class='fl'>0.6</span>,</span>
+<span class='r-in'>    <span class='fl'>0.4</span>, <span class='fl'>0.6</span>, <span class='fl'>1.0</span></span>
+<span class='r-in'>  <span class='op'>)</span>,</span>
+<span class='r-in'>  ncol <span class='op'>=</span> <span class='fl'>3</span></span>
+<span class='r-in'><span class='op'>)</span></span>
+<span class='r-in'><span class='va'>vechA</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1.0</span>, <span class='fl'>0.5</span>, <span class='fl'>0.4</span>, <span class='fl'>1.0</span>, <span class='fl'>0.6</span>, <span class='fl'>1.0</span><span class='op'>)</span></span>
+<span class='r-in'></span>
+<span class='r-in'><span class='fu'>diag_of_vech</span><span class='op'>(</span><span class='va'>vechA</span>, loc <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 1 1 1</span>
+<span class='r-in'><span class='fu'>diag_of_vech</span><span class='op'>(</span><span class='va'>vechA</span>, loc <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 1 4 6</span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

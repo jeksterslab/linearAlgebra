@@ -137,8 +137,9 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>Vector.
-Half-vectorization of a <code>k</code> by <code>k</code> matrix.</p></td>
+      <td><p>Vector of length <code>0.5 * k(k + 1)</code>.
+Half-vectorization of a <code>k</code> by <code>k</code> matrix.
+\(\mathrm{vech} \left( \mathbf{A}_{k \times k} \right)\).</p></td>
     </tr>
     </table>
 
@@ -163,15 +164,7 @@ Wiley.
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other Symmetric Functions: 
-<code><a href='.dcap.html'>.dcap</a>()</code>,
-<code><a href='.mcap_cor.html'>.mcap_cor</a>()</code>,
-<code><a href='.mcap_diag.html'>.mcap_diag</a>()</code>,
-<code><a href='.mcap_sym.html'>.mcap_sym</a>()</code>,
-<code><a href='.pinv_of_dcap.html'>.pinv_of_dcap</a>()</code>,
-<code><a href='.sym_of_vechs.html'>.sym_of_vechs</a>()</code>,
-<code><a href='.sym_of_vech.html'>.sym_of_vech</a>()</code>,
 <code><a href='dcap.html'>dcap</a>()</code>,
-<code><a href='k_check.html'>k_check</a>()</code>,
 <code><a href='mcap_cor.html'>mcap_cor</a>()</code>,
 <code><a href='mcap_diag.html'>mcap_diag</a>()</code>,
 <code><a href='mcap_sym.html'>mcap_sym</a>()</code>,
@@ -182,21 +175,22 @@ Wiley.
     <p>Ivan Jacob Agaloos Pesigan</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='va'>A</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span>
-  data <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span>
-    <span class='fl'>1.0</span>, <span class='fl'>0.5</span>, <span class='fl'>0.4</span>,
-    <span class='fl'>0.5</span>, <span class='fl'>1.0</span>, <span class='fl'>0.6</span>,
-    <span class='fl'>0.4</span>, <span class='fl'>0.6</span>, <span class='fl'>1.0</span>
-  <span class='op'>)</span>,
-  nrow <span class='op'>=</span> <span class='fl'>3</span>
-<span class='op'>)</span>
-<span class='va'>vechA</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1.0</span>, <span class='fl'>0.5</span>, <span class='fl'>0.4</span>, <span class='fl'>1.0</span>, <span class='fl'>0.6</span>, <span class='fl'>1.0</span><span class='op'>)</span>
-
-<span class='fu'>sym_of_vech</span><span class='op'>(</span><span class='va'>vechA</span><span class='op'>)</span>
-</div><div class='output co'>#&gt;      [,1] [,2] [,3]
-#&gt; [1,]  1.0  0.5  0.4
-#&gt; [2,]  0.5  1.0  0.6
-#&gt; [3,]  0.4  0.6  1.0</div></pre>
+    <pre class="examples"><span class='r-in'><span class='va'>A</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span></span>
+<span class='r-in'>  data <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span></span>
+<span class='r-in'>    <span class='fl'>1.0</span>, <span class='fl'>0.5</span>, <span class='fl'>0.4</span>,</span>
+<span class='r-in'>    <span class='fl'>0.5</span>, <span class='fl'>1.0</span>, <span class='fl'>0.6</span>,</span>
+<span class='r-in'>    <span class='fl'>0.4</span>, <span class='fl'>0.6</span>, <span class='fl'>1.0</span></span>
+<span class='r-in'>  <span class='op'>)</span>,</span>
+<span class='r-in'>  ncol <span class='op'>=</span> <span class='fl'>3</span></span>
+<span class='r-in'><span class='op'>)</span></span>
+<span class='r-in'><span class='va'>vechA</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1.0</span>, <span class='fl'>0.5</span>, <span class='fl'>0.4</span>, <span class='fl'>1.0</span>, <span class='fl'>0.6</span>, <span class='fl'>1.0</span><span class='op'>)</span></span>
+<span class='r-in'></span>
+<span class='r-in'><span class='fu'>sym_of_vech</span><span class='op'>(</span><span class='va'>vechA</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>      [,1] [,2] [,3]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1,]  1.0  0.5  0.4</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [2,]  0.5  1.0  0.6</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [3,]  0.4  0.6  1.0</span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

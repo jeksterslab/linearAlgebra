@@ -1,9 +1,15 @@
 #' Vector Names for Half-Vectorization
 #'
+#' Returns a character vector of length `0.5 * k * (k + 1)`
+#' from an input vector `x` of length `k`.
+#'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
-#' @inheritParams .vechnames
-#' @inherit .vechnames description return
+#' @param x Character vector of names of length `k`.
+#' @param sep Character string.
+#'   Separator for variable names.
+#'
+#' @returns A character vector.
 #'
 #' @examples
 #' x <- diag(1)

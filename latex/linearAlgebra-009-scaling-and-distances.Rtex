@@ -1,0 +1,89 @@
+\documentclass{article}
+
+\input{latex/preamble/preamble}
+
+\title{linearAlgebra: Scaling and Distance}
+\author{Ivan Jacob Agaloos Pesigan}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+<<echo=FALSE>>=
+root <- rprojroot::is_rstudio_project
+source(
+  root$find_file(
+    "latex",
+    "R_scripts",
+    "start.R"
+  )
+)
+@
+
+\section*{Deviation - Mean Centering}
+
+\input{latex/equations/linearAlgebra-d-univariate-let}
+
+\input{latex/equations/linearAlgebra-d-univariate}
+
+\input{latex/equations/linearAlgebra-d-univariate-where}
+
+<<echo = FALSE>>=
+data(iris)
+x <- as.matrix(iris[1:10, 1:4])
+@
+
+<<>>=
+d(x[, 1])
+@
+
+\input{latex/equations/linearAlgebra-d-multivariate-let}
+
+\input{latex/equations/linearAlgebra-d-multivariate}
+
+\input{latex/equations/linearAlgebra-d-multivariate-where}
+
+<<>>=
+d(x)
+@
+
+\section*{Standardized Score - Scaling}
+
+\input{latex/equations/linearAlgebra-z-univariate-let}
+
+\input{latex/equations/linearAlgebra-z-univariate}
+
+\input{latex/equations/linearAlgebra-z-univariate-where}
+
+<<>>=
+z(x[, 1])
+@
+
+\input{latex/equations/linearAlgebra-z-multivariate-let}
+
+\input{latex/equations/linearAlgebra-z-multivariate}
+
+\input{latex/equations/linearAlgebra-z-multivariate-where}
+
+<<>>=
+z(x)
+@
+
+\section*{$\Delta^2$ - Squared Mahalanobis Distance}
+
+\input{latex/equations/linearAlgebra-deltacapsq-let}
+
+\input{latex/equations/linearAlgebra-deltacapsq}
+
+\input{latex/equations/linearAlgebra-deltacapsq-where}
+
+<<>>=
+deltacapsq(
+  x,
+  mu  = colMeans(x),
+  sigmacap = stats::cov(x)
+)
+@
+
+\end{document}

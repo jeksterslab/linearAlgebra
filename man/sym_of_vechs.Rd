@@ -15,7 +15,7 @@ Strict half-vectorization of a \code{k} by \code{k} matrix.
 Diagonal elements.}
 }
 \value{
-A vector.
+A matrix.
 }
 \description{
 Symmetric matrix from its strict half-vectorization.
@@ -31,33 +31,17 @@ The
 \eqn{k \times 1}
 vector of diagonal values should be supplied.
 }
-\examples{
-A <- matrix(
-  data = c(
-    1.0, 0.5, 0.4,
-    0.5, 1.0, 0.6,
-    0.4, 0.6, 1.0
-  ),
-  ncol = 3
-)
-vechsA <- c(0.5, 0.4, 0.6)
-
-sym_of_vechs(vechsA, diags = 1)
-}
 \references{
-\href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Half-vectorization}{Wikipedia: Half-vectorization}
+\href{https://en.wikipedia.org/wiki/Vectorization_(mathematics)}{Wikipedia: Vectorization}
+
+Magnus, J. R., & Neudecker, H. (2019).
+Matrix  differential  calculus with  applications  in  statistics  and  econometrics.
+Wiley.
+\url{https://doi.org/10.1002/9781119541219}
 }
 \seealso{
 Other Symmetric Functions: 
-\code{\link{.dcap}()},
-\code{\link{.mcap_cor}()},
-\code{\link{.mcap_diag}()},
-\code{\link{.mcap_sym}()},
-\code{\link{.pinv_of_dcap}()},
-\code{\link{.sym_of_vechs}()},
-\code{\link{.sym_of_vech}()},
 \code{\link{dcap}()},
-\code{\link{k_check}()},
 \code{\link{mcap_cor}()},
 \code{\link{mcap_diag}()},
 \code{\link{mcap_sym}()},

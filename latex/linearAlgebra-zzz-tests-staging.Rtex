@@ -1,0 +1,41 @@
+\documentclass{article}
+
+\input{latex/preamble/preamble}
+
+\title{linearAlgebra: Staging}
+\author{Ivan Jacob Agaloos Pesigan}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+<<echo=FALSE>>=
+root <- rprojroot::is_rstudio_project
+source(
+  root$find_file(
+    "latex",
+    "R_scripts",
+    "start.R"
+  )
+)
+@
+
+<<>>=
+bar <- function() {
+  x <- vector(mode = "list", length = 1)
+  testthat::test_that(
+    "test-linearAlgebra-covc error",
+    {
+      testthat::expect_error(
+        covc(x)
+      )
+    }
+  )
+}
+bar()
+x <- vector(mode = "list", length = 1)
+covc(x)
+@
+
+\end{document}

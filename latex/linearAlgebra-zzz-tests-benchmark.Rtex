@@ -21,6 +21,38 @@ source(
 )
 @
 
+\section{.center}
+
+<<echo=FALSE, cache=FALSE>>=
+knitr::read_chunk(
+  root$find_file(
+    "tests_benchmark",
+    "test-benchmark-linearAlgebra-d-dot.R"
+  )
+)
+@
+
+<<test-benchmark-linearAlgebra-d-dot, echo=FALSE>>=
+@
+
+\newpage
+
+\section{.deltacapsq}
+
+<<echo=FALSE, cache=FALSE>>=
+knitr::read_chunk(
+  root$find_file(
+    "tests_benchmark",
+    "test-benchmark-linearAlgebra-deltacapsq-dot.R"
+  )
+)
+@
+
+<<test-benchmark-linearAlgebra-deltacapsq-dot, echo=FALSE>>=
+@
+
+\newpage
+
 \section{.pinv\_of\_dcap}
 
 <<echo=FALSE, cache=FALSE>>=
@@ -32,7 +64,7 @@ knitr::read_chunk(
 )
 @
 
-<<test-benchmark-linearAlgebra-pinv-of-dcap-dot>>=
+<<test-benchmark-linearAlgebra-pinv-of-dcap-dot, echo=FALSE>>=
 @
 
 \newpage
@@ -48,7 +80,7 @@ knitr::read_chunk(
 )
 @
 
-<<test-benchmark-linearAlgebra-vec-dot>>=
+<<test-benchmark-linearAlgebra-vec-dot, echo=FALSE>>=
 @
 
 \newpage
@@ -64,7 +96,23 @@ knitr::read_chunk(
 )
 @
 
-<<test-benchmark-linearAlgebra-vec-mean-dot>>=
+<<test-benchmark-linearAlgebra-vec-mean-dot, echo=FALSE>>=
+@
+
+\newpage
+
+\section{.z}
+
+<<echo=FALSE, cache=FALSE>>=
+knitr::read_chunk(
+  root$find_file(
+    "tests_benchmark",
+    "test-benchmark-linearAlgebra-z-dot.R"
+  )
+)
+@
+
+<<test-benchmark-linearAlgebra-z-dot, echo=FALSE>>=
 @
 
 \newpage 
