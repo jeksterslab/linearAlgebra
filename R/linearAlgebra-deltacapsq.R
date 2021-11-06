@@ -1,4 +1,4 @@
-#' Squared Mahalanobis Distance - Dot Function
+#' Squared Mahalanobis Distance
 #'
 #' Calculates the squared Mahalanobis distance.
 #'

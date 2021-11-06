@@ -2,7 +2,7 @@
 % Please edit documentation in R/linearAlgebra-deltacapsq.R
 \name{deltacapsq}
 \alias{deltacapsq}
-\title{Squared Mahalanobis Distance - Dot Function}
+\title{Squared Mahalanobis Distance}
 \usage{
 deltacapsq(x, mu, sigmacap)
 }
