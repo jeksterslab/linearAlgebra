@@ -2,9 +2,6 @@
 
 \input{latex/preamble/preamble}
 
-\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
-\addbibresource{bib/Lib-Linear-Algebra-Books.bib}
-
 \title{Vectorization}
 \author{Ivan Jacob Agaloos Pesigan}
 \date{}

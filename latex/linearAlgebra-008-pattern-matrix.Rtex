@@ -2,9 +2,6 @@
 
 \input{latex/preamble/preamble}
 
-\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
-\addbibresource{bib/Lib-Correlations-Asymptotic-Covariance-Matrix.bib}
-
 \title{Pattern Matrix}
 \author{Ivan Jacob Agaloos Pesigan}
 \date{}

@@ -27,7 +27,9 @@ A collection of functions related to linear algebra.
 
 \section*{Installation}
 
-You can install the released version of \texttt{linearAlgebra} from
+You can install the released version of
+\texttt{linearAlgebra}
+from
 \href{https://github.com/jeksterslab/linearAlgebra}{GitHub}
 with:
 
@@ -41,5 +43,13 @@ remotes::install_github("jeksterslab/linearAlgebra")
 See
 \href{https://jeksterslab.github.io/linearAlgebra/index.html}{GitHub Pages}
 for package documentation.
+
+\nocite{Abadir-2005}
+\nocite{Magnus-1980}
+\nocite{Magnus-2019}
+\nocite{Nel-1985}
+\nocite{R-2021}
+
+\printbibliography
 
 \end{document}

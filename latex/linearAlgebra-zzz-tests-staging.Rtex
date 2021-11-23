@@ -2,6 +2,8 @@
 
 \input{latex/preamble/preamble}
 
+\renewcommand{\baselinestretch}{1}
+
 \title{linearAlgebra: Staging}
 \author{Ivan Jacob Agaloos Pesigan}
 \date{}
@@ -19,23 +21,6 @@ source(
     "start.R"
   )
 )
-@
-
-<<>>=
-bar <- function() {
-  x <- vector(mode = "list", length = 1)
-  testthat::test_that(
-    "test-linearAlgebra-covc error",
-    {
-      testthat::expect_error(
-        covc(x)
-      )
-    }
-  )
-}
-bar()
-x <- vector(mode = "list", length = 1)
-covc(x)
 @
 
 \end{document}

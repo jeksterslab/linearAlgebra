@@ -2,7 +2,6 @@
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
-
 #' @inheritParams sym_of_vechs
 #' @param diags Vector.
 #'   Diagonal elements.
@@ -13,29 +12,25 @@
 .check_vechs <- function(x,
                          diags = NULL,
                          return_k = FALSE) {
-  if (!is.vector(x)) {
-    stop(
-      "The strict half-vectorization is not of class vector."
-    )
-  }
+  stopifnot(
+    is.vector(x)
+  )
   k <- 0.5 * (
     sqrt(
       1 + 8 * length(x)
     ) + 1
   )
-  if (k %% 1 != 0) {
-    stop("Length of the strict half-vectorization is not valid.")
-  }
+  stopifnot(
+    k %% 1 == 0
+  )
   if (!is.null(diags)) {
     stopifnot(
       is.vector(diags)
     )
-    diagsk <- length(diags)
-    if (!(diagsk == 1 || diagsk == k)) {
-      stop(
-        "Length of the diagonal elements is not valid."
-      )
-    }
+    diags_length <- length(diags)
+    stopifnot(
+      diags_length == 1 || diags_length == k
+    )
   }
   if (return_k) {
     return(k)

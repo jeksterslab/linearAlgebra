@@ -1,12 +1,13 @@
 linearAlgebra
 ================
 Ivan Jacob Agaloos Pesigan
-2021-11-06
+2021-11-23
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/jeksterslab/linearAlgebra/workflows/R-CMD-check/badge.svg)](https://github.com/jeksterslab/linearAlgebra/actions)
+[![codecov](https://codecov.io/gh/jeksterslab/linearAlgebra/branch/main/graph/badge.svg)](https://codecov.io/gh/jeksterslab/linearAlgebra)
 <!-- badges: end -->
 
 ## Description

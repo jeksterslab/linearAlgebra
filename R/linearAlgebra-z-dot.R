@@ -27,7 +27,6 @@
   )
 }
 
-
 #' Standarize (Matrix Input) - Dot Function
 #'
 #' @author Ivan Jacob Agaloos Pesigan

@@ -70,13 +70,16 @@ deltacapsq <- function(x,
       )
     )
   }
-  .check_mu_sigmacap(
-    mu = mu,
-    sigmacap = sigmacap
-  )
   dims <- dim(x)
   n <- dims[1]
   k <- dims[2]
+  stopifnot(
+    k == .check_mu_and_sigmacap(
+      mu = mu,
+      sigmacap = sigmacap,
+      return_k = TRUE
+    )
+  )
   .deltacapsq(
     d = .d(
       x = x,

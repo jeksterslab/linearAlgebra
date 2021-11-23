@@ -2,10 +2,6 @@
 
 \input{latex/preamble/preamble}
 
-\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
-\addbibresource{bib/Lib-Linear-Algebra-Books.bib}
-\addbibresource{bib/Lib-Linear-Algebra.bib}
-
 \title{The Moore-Penrose Inverse of the Duplication Matrix}
 \author{Ivan Jacob Agaloos Pesigan}
 \date{}

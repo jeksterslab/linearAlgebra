@@ -16,7 +16,7 @@
 #' @returns A matrix.
 #'
 #' @family Scaling Functions
-#' @keywords linearAlgebra scaling
+#' @keywords linearAlgebra scaling dot
 #' @noRd
 .d <- function(x,
                center,
@@ -45,7 +45,7 @@
 #' @returns A vector.
 #'
 #' @family Scaling Functions
-#' @keywords linearAlgebra scaling
+#' @keywords linearAlgebra scaling dot
 #' @noRd
 .d_vec <- function(x,
                    center) {

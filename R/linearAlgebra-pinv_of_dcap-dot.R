@@ -1,6 +1,5 @@
 #' The Moore-Penrose Inverse of the Duplication Matrix - Dot Function
 #'
-#' @inheritParams dcap
 #' @inherit pinv_of_dcap description details references return
 #'
 #' @param d Numeric matrix.

@@ -10,19 +10,17 @@
 #' @noRd
 .check_vech <- function(x,
                         return_k = FALSE) {
-  if (!is.vector(x)) {
-    stop(
-      "The half-vectorization is not of class vector."
-    )
-  }
+  stopifnot(
+    is.vector(x)
+  )
   k <- 0.5 * (
     sqrt(
       1 + 8 * length(x)
     ) - 1
   )
-  if (k %% 1 != 0) {
-    stop("Length of the half-vectorization is not valid.")
-  }
+  stopifnot(
+    k %% 1 == 0
+  )
   if (return_k) {
     return(k)
   }
