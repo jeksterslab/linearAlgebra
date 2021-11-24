@@ -5,7 +5,7 @@ reference:
 - title: Package
   contents:
   - has_keyword("package")
-- title: Functiions
+- title: Functions
   contents:
   - has_keyword("linearAlgebra")
 - title: Operation
