@@ -21,6 +21,12 @@
     is.matrix(sigmacap),
     sigmacap == t(sigmacap)
   )
+  # non-zero variance
+  stopifnot(
+    all(
+      diag(sigmacap) > 0
+    )
+  )
   # mu - vector
   stopifnot(
     is.vector(mu)
@@ -28,7 +34,7 @@
   # sigmacap and mu dimensions
   k <- dim(sigmacap)[1]
   stopifnot(
-    dim(sigmacap)[1] == length(mu)
+    k == length(mu)
   )
   if (return_k) {
     return(k)
