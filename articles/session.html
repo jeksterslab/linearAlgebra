@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,18 +33,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">linearAlgebra</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.9.1</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../articles/linearAlgebra.html">Get started</a>
 </li>
@@ -79,7 +75,7 @@
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>linearAlgebra: Session</h1>
-                        <h4 class="author">Ivan Jacob Agaloos Pesigan</h4>
+                        <h4 data-toc-skip class="author">Ivan Jacob Agaloos Pesigan</h4>
             
       
       
@@ -90,12 +86,12 @@
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">linearAlgebra</span><span class="op">)</span></code></pre></div>
-<div id="session" class="section level1">
-<h1 class="hasAnchor">
-<a href="#session" class="anchor"></a>Session</h1>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">linearAlgebra</span><span class="op">)</span></code></pre></div>
+<div class="section level1">
+<h1 id="session">Session<a class="anchor" aria-label="anchor" href="#session"></a>
+</h1>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo</a></span><span class="op">(</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html" class="external-link">sessionInfo</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; R version 4.1.2 (2021-11-01)</span>
 <span class="co">#&gt; Platform: x86_64-pc-linux-gnu (64-bit)</span>
 <span class="co">#&gt; Running under: Ubuntu 20.04.3 LTS</span>
@@ -117,43 +113,45 @@
 <span class="co">#&gt; [1] linearAlgebra_0.9.1</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; loaded via a namespace (and not attached):</span>
-<span class="co">#&gt;  [1] rprojroot_2.0.2   digest_0.6.28     crayon_1.4.2      R6_2.5.1         </span>
-<span class="co">#&gt;  [5] magrittr_2.0.1    evaluate_0.14     stringi_1.7.5     rlang_0.4.12     </span>
-<span class="co">#&gt;  [9] cachem_1.0.6      fs_1.5.0          ragg_1.2.0        rmarkdown_2.11   </span>
-<span class="co">#&gt; [13] pkgdown_1.6.1     textshaping_0.3.6 desc_1.4.0        tools_4.1.2      </span>
-<span class="co">#&gt; [17] stringr_1.4.0     yaml_2.2.1        xfun_0.28         fastmap_1.1.0    </span>
-<span class="co">#&gt; [21] compiler_4.1.2    systemfonts_1.0.3 memoise_2.0.1     htmltools_0.5.2  </span>
-<span class="co">#&gt; [25] knitr_1.36</span></code></pre></div>
+<span class="co">#&gt;  [1] knitr_1.36        magrittr_2.0.1    R6_2.5.1          ragg_1.2.0       </span>
+<span class="co">#&gt;  [5] rlang_0.4.12      fastmap_1.1.0     stringr_1.4.0     tools_4.1.2      </span>
+<span class="co">#&gt;  [9] xfun_0.28         jquerylib_0.1.4   htmltools_0.5.2   systemfonts_1.0.3</span>
+<span class="co">#&gt; [13] yaml_2.2.1        digest_0.6.29     rprojroot_2.0.2   pkgdown_2.0.1    </span>
+<span class="co">#&gt; [17] crayon_1.4.2      textshaping_0.3.6 purrr_0.3.4       sass_0.4.0       </span>
+<span class="co">#&gt; [21] fs_1.5.1          memoise_2.0.1     cachem_1.0.6      evaluate_0.14    </span>
+<span class="co">#&gt; [25] rmarkdown_2.11    stringi_1.7.6     compiler_4.1.2    bslib_0.3.1      </span>
+<span class="co">#&gt; [29] desc_1.4.0        jsonlite_1.7.2</span></code></pre></div>
 </div>
-<div id="packages" class="section level1">
-<h1 class="hasAnchor">
-<a href="#packages" class="anchor"></a>Packages</h1>
+<div class="section level1">
+<h1 id="packages">Packages<a class="anchor" aria-label="anchor" href="#packages"></a>
+</h1>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/unname.html">unname</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span><span class="op">)</span>
-<span class="co">#&gt;  [1] "askpass"       "base64enc"     "brio"          "cachem"       </span>
-<span class="co">#&gt;  [5] "callr"         "cli"           "covr"          "cpp11"        </span>
-<span class="co">#&gt;  [9] "crayon"        "curl"          "desc"          "diffobj"      </span>
-<span class="co">#&gt; [13] "digest"        "downlit"       "ellipsis"      "evaluate"     </span>
-<span class="co">#&gt; [17] "fansi"         "fastmap"       "fs"            "glue"         </span>
-<span class="co">#&gt; [21] "highr"         "htmltools"     "httr"          "jquerylib"    </span>
-<span class="co">#&gt; [25] "jsonlite"      "knitr"         "lazyeval"      "lifecycle"    </span>
-<span class="co">#&gt; [29] "linearAlgebra" "magrittr"      "memoise"       "mime"         </span>
-<span class="co">#&gt; [33] "openssl"       "pak"           "pillar"        "pkgconfig"    </span>
-<span class="co">#&gt; [37] "pkgdown"       "pkgload"       "praise"        "processx"     </span>
-<span class="co">#&gt; [41] "ps"            "purrr"         "R6"            "ragg"         </span>
-<span class="co">#&gt; [45] "rematch2"      "rex"           "rlang"         "rmarkdown"    </span>
-<span class="co">#&gt; [49] "rprojroot"     "rstudioapi"    "sessioninfo"   "stringi"      </span>
-<span class="co">#&gt; [53] "stringr"       "sys"           "systemfonts"   "testthat"     </span>
-<span class="co">#&gt; [57] "textshaping"   "tibble"        "tinytex"       "utf8"         </span>
-<span class="co">#&gt; [61] "vctrs"         "waldo"         "whisker"       "withr"        </span>
-<span class="co">#&gt; [65] "xfun"          "xml2"          "yaml"          "base"         </span>
-<span class="co">#&gt; [69] "boot"          "class"         "cluster"       "codetools"    </span>
-<span class="co">#&gt; [73] "compiler"      "datasets"      "foreign"       "graphics"     </span>
-<span class="co">#&gt; [77] "grDevices"     "grid"          "KernSmooth"    "lattice"      </span>
-<span class="co">#&gt; [81] "MASS"          "Matrix"        "methods"       "mgcv"         </span>
-<span class="co">#&gt; [85] "nlme"          "nnet"          "parallel"      "rpart"        </span>
-<span class="co">#&gt; [89] "spatial"       "splines"       "stats"         "stats4"       </span>
-<span class="co">#&gt; [93] "survival"      "tcltk"         "tools"         "utils"</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/unname.html" class="external-link">unname</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html" class="external-link">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span><span class="op">)</span>
+<span class="co">#&gt;  [1] "askpass"       "base64enc"     "brio"          "bslib"        </span>
+<span class="co">#&gt;  [5] "cachem"        "callr"         "cli"           "covr"         </span>
+<span class="co">#&gt;  [9] "cpp11"         "crayon"        "curl"          "desc"         </span>
+<span class="co">#&gt; [13] "diffobj"       "digest"        "downlit"       "ellipsis"     </span>
+<span class="co">#&gt; [17] "evaluate"      "fansi"         "fastmap"       "fs"           </span>
+<span class="co">#&gt; [21] "glue"          "highr"         "htmltools"     "httr"         </span>
+<span class="co">#&gt; [25] "jquerylib"     "jsonlite"      "knitr"         "lazyeval"     </span>
+<span class="co">#&gt; [29] "lifecycle"     "linearAlgebra" "magrittr"      "memoise"      </span>
+<span class="co">#&gt; [33] "mime"          "openssl"       "pak"           "pillar"       </span>
+<span class="co">#&gt; [37] "pkgconfig"     "pkgdown"       "pkgload"       "praise"       </span>
+<span class="co">#&gt; [41] "processx"      "ps"            "purrr"         "R6"           </span>
+<span class="co">#&gt; [45] "ragg"          "rappdirs"      "rematch2"      "rex"          </span>
+<span class="co">#&gt; [49] "rlang"         "rmarkdown"     "rprojroot"     "rstudioapi"   </span>
+<span class="co">#&gt; [53] "sass"          "sessioninfo"   "stringi"       "stringr"      </span>
+<span class="co">#&gt; [57] "sys"           "systemfonts"   "testthat"      "textshaping"  </span>
+<span class="co">#&gt; [61] "tibble"        "tinytex"       "utf8"          "vctrs"        </span>
+<span class="co">#&gt; [65] "waldo"         "whisker"       "withr"         "xfun"         </span>
+<span class="co">#&gt; [69] "xml2"          "yaml"          "base"          "boot"         </span>
+<span class="co">#&gt; [73] "class"         "cluster"       "codetools"     "compiler"     </span>
+<span class="co">#&gt; [77] "datasets"      "foreign"       "graphics"      "grDevices"    </span>
+<span class="co">#&gt; [81] "grid"          "KernSmooth"    "lattice"       "MASS"         </span>
+<span class="co">#&gt; [85] "Matrix"        "methods"       "mgcv"          "nlme"         </span>
+<span class="co">#&gt; [89] "nnet"          "parallel"      "rpart"         "spatial"      </span>
+<span class="co">#&gt; [93] "splines"       "stats"         "stats4"        "survival"     </span>
+<span class="co">#&gt; [97] "tcltk"         "tools"         "utils"</span></code></pre></div>
 </div>
   </div>
 
@@ -168,11 +166,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Ivan Jacob Agaloos Pesigan.</p>
+  <p></p>
+<p>Developed by Ivan Jacob Agaloos Pesigan.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
       </footer>
@@ -180,6 +180,8 @@
 
   
 
+
+  
 
   </body>
 </html>
