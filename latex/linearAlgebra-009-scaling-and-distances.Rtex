@@ -10,6 +10,15 @@
 
 \maketitle
 
+<<echo = FALSE>>=
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/latex-",
+  out.width = "100%"
+)
+@
+
 <<echo=FALSE>>=
 root <- rprojroot::is_rstudio_project
 source(
@@ -85,5 +94,9 @@ deltacapsq(
   sigmacap = stats::cov(x)
 )
 @
+
+\nocite{R-2021}
+
+\printbibliography
 
 \end{document}

@@ -10,6 +10,15 @@
 
 \maketitle
 
+<<echo = FALSE>>=
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/latex-",
+  out.width = "100%"
+)
+@
+
 <<echo=FALSE>>=
 root <- rprojroot::is_rstudio_project
 source(
@@ -113,6 +122,8 @@ rm(A)
 See \Textcite{Magnus-2019} p. 56--57 and 444
 and
 \Textcite{Abadir-2005} ch. 10--11.
+
+\nocite{R-2021}
 
 \printbibliography
 

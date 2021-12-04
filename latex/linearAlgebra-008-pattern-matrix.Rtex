@@ -10,6 +10,15 @@
 
 \maketitle
 
+<<echo = FALSE>>=
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/latex-",
+  out.width = "100%"
+)
+@
+
 <<echo=FALSE>>=
 root <- rprojroot::is_rstudio_project
 source(
@@ -56,6 +65,8 @@ mcap_cor(2)
 \section*{Readings}
 
 See \Textcite{Nel-1985} p. 141--142.
+
+\nocite{R-2021}
 
 \printbibliography
 

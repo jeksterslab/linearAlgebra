@@ -1,0 +1,211 @@
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
+% maxwidth is the original width if it is less than linewidth
+% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+\input{latex/preamble/preamble}
+
+\title{linearAlgebra: Scaling and Distance}
+\author{Ivan Jacob Agaloos Pesigan}
+\date{}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\maketitle
+
+
+
+
+
+\section*{Deviation - Mean Centering}
+
+\input{latex/equations/linearAlgebra-d-univariate-let}
+
+\input{latex/equations/linearAlgebra-d-univariate}
+
+\input{latex/equations/linearAlgebra-d-univariate-where}
+
+
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{d}\hlstd{(x[,} \hlnum{1}\hlstd{])}
+\end{alltt}
+\begin{verbatim}
+#>        [,1]
+#>  [1,]  0.24
+#>  [2,]  0.04
+#>  [3,] -0.16
+#>  [4,] -0.26
+#>  [5,]  0.14
+#>  [6,]  0.54
+#>  [7,] -0.26
+#>  [8,]  0.14
+#>  [9,] -0.46
+#> [10,]  0.04
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\input{latex/equations/linearAlgebra-d-multivariate-let}
+
+\input{latex/equations/linearAlgebra-d-multivariate}
+
+\input{latex/equations/linearAlgebra-d-multivariate-where}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{d}\hlstd{(x)}
+\end{alltt}
+\begin{verbatim}
+#>    Sepal.Length Sepal.Width Petal.Length Petal.Width
+#> 1          0.24        0.19        -0.05       -0.02
+#> 2          0.04       -0.31        -0.05       -0.02
+#> 3         -0.16       -0.11        -0.15       -0.02
+#> 4         -0.26       -0.21         0.05       -0.02
+#> 5          0.14        0.29        -0.05       -0.02
+#> 6          0.54        0.59         0.25        0.18
+#> 7         -0.26        0.09        -0.05        0.08
+#> 8          0.14        0.09         0.05       -0.02
+#> 9         -0.46       -0.41        -0.05       -0.02
+#> 10         0.04       -0.21         0.05       -0.12
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\section*{Standardized Score - Scaling}
+
+\input{latex/equations/linearAlgebra-z-univariate-let}
+
+\input{latex/equations/linearAlgebra-z-univariate}
+
+\input{latex/equations/linearAlgebra-z-univariate-where}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{z}\hlstd{(x[,} \hlnum{1}\hlstd{])}
+\end{alltt}
+\begin{verbatim}
+#>             [,1]
+#>  [1,]  0.8237318
+#>  [2,]  0.1372886
+#>  [3,] -0.5491545
+#>  [4,] -0.8923761
+#>  [5,]  0.4805102
+#>  [6,]  1.8533965
+#>  [7,] -0.8923761
+#>  [8,]  0.4805102
+#>  [9,] -1.5788192
+#> [10,]  0.1372886
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\input{latex/equations/linearAlgebra-z-multivariate-let}
+
+\input{latex/equations/linearAlgebra-z-multivariate}
+
+\input{latex/equations/linearAlgebra-z-multivariate-where}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{z}\hlstd{(x)}
+\end{alltt}
+\begin{verbatim}
+#>    Sepal.Length Sepal.Width Petal.Length Petal.Width
+#> 1     0.8237318   0.6186158     -0.46291  -0.2535463
+#> 2     0.1372886  -1.0093205     -0.46291  -0.2535463
+#> 3    -0.5491545  -0.3581460     -1.38873  -0.2535463
+#> 4    -0.8923761  -0.6837333      0.46291  -0.2535463
+#> 5     0.4805102   0.9442031     -0.46291  -0.2535463
+#> 6     1.8533965   1.9209649      2.31455   2.2819165
+#> 7    -0.8923761   0.2930285     -0.46291   1.0141851
+#> 8     0.4805102   0.2930285      0.46291  -0.2535463
+#> 9    -1.5788192  -1.3349078     -0.46291  -0.2535463
+#> 10    0.1372886  -0.6837333      0.46291  -1.5212777
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\section*{$\Delta^2$ - Squared Mahalanobis Distance}
+
+\input{latex/equations/linearAlgebra-deltacapsq-let}
+
+\input{latex/equations/linearAlgebra-deltacapsq}
+
+\input{latex/equations/linearAlgebra-deltacapsq-where}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{deltacapsq}\hlstd{(}
+  \hlstd{x,}
+  \hlkwc{mu}  \hlstd{=} \hlkwd{colMeans}\hlstd{(x),}
+  \hlkwc{sigmacap} \hlstd{= stats}\hlopt{::}\hlkwd{cov}\hlstd{(x)}
+\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+#>         1         2         3         4         5         6         7         8 
+#> 2.1836824 6.0959842 2.3508914 2.6450391 3.3674652 7.2574119 3.7700132 0.7755954 
+#>         9        10 
+#> 3.0556619 4.4982552
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\nocite{R-2021}
+
+\printbibliography
+
+\end{document}
